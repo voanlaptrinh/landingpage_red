@@ -37,6 +37,12 @@ return new class extends Migration
             $table->string('content3')->nullable();
             $table->string('content4')->nullable();
             $table->string('content5')->nullable();
+            $table->json('json')->nullable();
+            $table->json('json1')->nullable();
+            $table->json('json2')->nullable();
+            $table->json('json3')->nullable();
+            $table->json('json4')->nullable();
+            $table->json('json5')->nullable();
             $table->unsignedBigInteger('landingpage_id');
             $table->timestamps();
             $table->foreign('landingpage_id')->references('id')->on('landingpages')->onDelete('cascade');

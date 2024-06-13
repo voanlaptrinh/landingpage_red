@@ -16,11 +16,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
-    <h1>Sortable Landing Pages</h1>
+    <h1>Sortable Landing Pagesádasd</h1>
     <ul id="sortable">
         @foreach ($landingpages as $landingPage)
             <li class="ui-state-default" data-id="{{ $landingPage->id }}">
-                {{ $landingPage->title }}
+               <h4>ádd</h4> {{ $landingPage->title }}
             </li>
         @endforeach
     </ul>

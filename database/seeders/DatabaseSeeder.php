@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             [
                 'title' => 'block01',
                 'order' => 1,
+                'status' => 1
     
             ],
            
@@ -33,7 +34,7 @@ class DatabaseSeeder extends Seeder
             [
                 'title' => 'block02',
                 'order' => 2,
-    
+                'status' => 1
             ],
         );
         DB::table('blocks')->insert(

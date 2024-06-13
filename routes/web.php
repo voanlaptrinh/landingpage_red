@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\LandingpageController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
-Route::post('/landingpages/sort', [LandingPageController::class, 'sort'])->name('landingpages.sort');
+
+
+
+Route::prefix('/admin')->group(function () {
+
+    Route::get('/', [DashboardController::class, 'index'])->name('landingpage.admin');
+    Route::post('/landingpages/sort', [DashboardController::class, 'sort'])->name('landingpages.sort');
+    Route::post('/landingpages/toggle-status', [DashboardController::class, 'toggleStatus'])->name('landingpages.toggleStatus');
+  
+
+})->name('admin');
