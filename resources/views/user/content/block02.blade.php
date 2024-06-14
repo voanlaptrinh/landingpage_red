@@ -1,3 +1,4 @@
-@if ($item->title == 'block02')
+@if (!empty($landingPage->title == 'block02') & $landingPage->title == 'block02')
+<br>
 Đây là block02
 @endif

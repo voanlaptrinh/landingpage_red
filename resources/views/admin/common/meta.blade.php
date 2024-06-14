@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- Favicons -->
-<link href="assets/img/favicon.png" rel="icon">
+<link href="{{ asset( $webConfig->logo) }}" rel="icon">
 <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <!-- Google Fonts -->
@@ -46,11 +46,11 @@
 
 .file-upload-label {
     cursor: pointer;
-    background-color: #ddd;
+    /* background-color: #ddd; */
     padding: 25px 70px;
     border-radius: 40px;
     border: 2px dashed rgb(82, 82, 82);
-    box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719);
+    /* box-shadow: 0px 0px 200px -50px rgba(0, 0, 0, 0.719); */
 }
 
 .file-upload-design {

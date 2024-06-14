@@ -3,44 +3,36 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="">
-          <i class="bi bi-grid"></i>
-          <span>Landingpage</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+        <li class="nav-item {{ Request::route()->getName() == 'landingpage.admin' ? 'active-sidebar' : '' }}">
+            <a class="nav-link " href="{{ route('landingpage.admin') }}">
+                <i class="bi bi-grid"></i>
+                <span>Landingpage</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link " href="{{route('news.admin')}}">
-          <i class="bi bi-newspaper"></i>
-          <span>Tin tức</span>
-        </a>
+        <li
+            class="nav-item {{ Request::route()->getName() == 'news.admin' ? 'active-sidebar' : '' }}{{ Request::route()->getName() == 'news.create' ? 'active-sidebar' : '' }}{{ Request::route()->getName() == 'news.edit' ? 'active-sidebar' : '' }}{{ Request::route()->getName() == 'news.detail' ? 'active-sidebar' : '' }}">
+            <a class="nav-link " href="{{ route('news.admin') }}">
+                <i class="bi bi-newspaper"></i>
+                <span>Tin tức</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+        <li class="nav-item {{ Request::route()->getName() == 'webconfig.admin' ? 'active-sidebar' : '' }}">
+            <a class="nav-link " href="{{ route('webconfig.admin') }}">
+                <i class="ri-settings-2-line"></i>
+                <span>Web setting</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+        <li class="nav-item {{ Request::route()->getName() == 'contact.admin' ? 'active-sidebar' : '' }}">
+          <a class="nav-link " href="{{ route('contact.admin') }}">
+              <i class="bx bx-mail-send"></i>
+              <span>Liên hệ</span>
+          </a>
       </li><!-- End Dashboard Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Remix Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-boxicons.html">
-              <i class="bi bi-circle"></i><span>Boxicons</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Icons Nav -->
+        
 
-      
+
 
     </ul>
 
-  </aside><!-- End Sidebar-->
+</aside><!-- End Sidebar-->

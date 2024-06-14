@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>ADMIN</title>
+<head>@php
+    $webConfig = \App\Models\WebConfig::find(1);
+@endphp
+    <title>{{$webConfig->title}}</title>
     @include('admin.common.meta')
+    
 </head>
 <body>
-    
+  
     @include('admin.common.header')
     @include('admin.common.sidebar')
 
@@ -52,7 +55,9 @@
         toastr.warning("{{ Session::get('warning') }}");
     @endif
 </script>
+
 <script>
+
     $(function() {
         $('#sortable').sortable({
             update: function(event, ui) {

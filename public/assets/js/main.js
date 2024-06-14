@@ -199,6 +199,7 @@
     autosave_restore_when_empty: false,
     autosave_retention: '2m',
     image_advtab: true,
+    images_upload_url: "/upload-image",
     link_list: [{
         title: 'My page 1',
         value: 'https://www.tiny.cloud'
@@ -258,7 +259,10 @@
     contextmenu: 'link image table',
     skin: useDarkMode ? 'oxide-dark' : 'oxide',
     content_css: useDarkMode ? 'dark' : 'default',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }',
+    relative_urls: false,
+    remove_script_host: false,
+    document_base_url: '{{ url('/') }}'
   });
 
   /**
