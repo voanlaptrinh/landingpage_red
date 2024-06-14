@@ -4,13 +4,18 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="">
           <i class="bi bi-grid"></i>
           <span>Landingpage</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
-
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('news.admin')}}">
+          <i class="bi bi-newspaper"></i>
+          <span>Tin tức</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>

@@ -50,12 +50,12 @@ class DatabaseSeeder extends Seeder
         );
         DB::table('blocks')->insert(
             [
-                'title' => 'block01',
-                'title1' => 'block01',
-                'title2' => 'block01',
-                'title3' => 'block01',
-                'title4' => 'block01',
-                'title5' => 'block01',
+                'title' => 'block2',
+                'title1' => 'block2',
+                'title2' => 'block2',
+                'title3' => 'block2',
+                'title4' => 'block2',
+                'title5' => 'block2',
                 'landingpage_id' => 2
             ],
         );

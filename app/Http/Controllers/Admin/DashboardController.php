@@ -31,5 +31,18 @@ class DashboardController extends Controller
 
         return response()->json(['status' => 'success']);
     }
+    public function updateImage(Request $request)
+    {
+        $id = $request->input('id');
+        $landingPage = Langdingpage::find($id);
+        if ($landingPage && $request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('image'), $filename);
+            $landingPage->images = $filename;
+            $landingPage->save();
+        }
 
+        return redirect()->back()->with('success', 'Image updated successfully!');
+    }
 }
