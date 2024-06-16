@@ -37,6 +37,12 @@ return new class extends Migration
             $table->string('content3')->nullable();
             $table->string('content4')->nullable();
             $table->string('content5')->nullable();
+            $table->string('link')->nullable();
+            $table->string('link1')->nullable();
+            $table->string('link2')->nullable();
+            $table->string('link3')->nullable();
+            $table->string('link4')->nullable();
+            $table->string('link5')->nullable();
             $table->json('json')->nullable();
             $table->json('json1')->nullable();
             $table->json('json2')->nullable();

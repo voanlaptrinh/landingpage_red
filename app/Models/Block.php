@@ -15,7 +15,7 @@ class Block extends Model
         'description', 'description1', 'description2', 'description3', 'description4', 'description5',
         'images', 'images1', 'images2', 'images3', 'images4', 'images5',
         'content', 'content1', 'content2', 'content3', 'content4', 'content5',
-        'json', 'json1', 'json2', 'json3', 'json4', 'json5',
+        'json', 'json1', 'json2', 'json3', 'json4', 'json5', 'link', 'link1', 'link2', 'link3', 'link4', 'link5',
         'landingpage_id'
     ];
     protected $casts = [
