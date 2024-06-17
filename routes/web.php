@@ -31,6 +31,8 @@ Route::prefix('/admin')->group(function () {
     Route::post('/landingpages/toggle-status', [DashboardController::class, 'toggleStatus'])->name('landingpages.toggleStatus');
     Route::post('/landingpages/updateImage', [DashboardController::class, 'updateImage'])->name('landingpages.updateImage');
     Route::get('/{id}/blockLandingPage', [BlockLandingController::class, 'index'])->name('block.admin');
+    Route::put('/blocks/{id}/updateBlock', [BlockLandingController::class, 'update'])->name('blocks.update');
+    
     //Tin tức
     Route::prefix('/news')->group(function () {
         Route::get('/', [NewsController::class, 'index'])->name('news.admin');

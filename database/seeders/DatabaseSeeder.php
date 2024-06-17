@@ -93,6 +93,7 @@ class DatabaseSeeder extends Seeder
         );
         DB::table('blocks')->insert(
             [
+                'block_type' => 'block01',
                 'title' => 'Make Perfect Design',
                 'title1' => 'Let\'s Learn 3D Design Quickly & Creatively',
                 'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean ligula eget dolor. Aenean massa. Cum sociis natoque penatibus magnis parturient montes nascetur ridiculus. ',
@@ -104,6 +105,7 @@ class DatabaseSeeder extends Seeder
         );
         DB::table('blocks')->insert(
             [
+                'block_type' => 'block02',
                 'title' => 'block2',
                 'title1' => 'block2',
                 'title2' => 'block2',

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('blocks', function (Blueprint $table) {
             $table->id();
+            $table->string('block_type');
             $table->string('title')->nullable();
             $table->string('title1')->nullable();
             $table->string('title2')->nullable();
