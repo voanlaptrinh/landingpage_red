@@ -76,6 +76,91 @@ class BlockLandingController extends Controller
                 $data[$imageField] = 'images/' . $imageName;
             }
         }
+        if ($request->has('json')) {
+            foreach ($data['json'] as $index => $jsonData) {
+                if (isset($jsonData['image']) && $jsonData['image'] instanceof \Illuminate\Http\UploadedFile) {
+                    $imageName = time() . '_' . $jsonData['image']->getClientOriginalName();
+                    $imagePath = $jsonData['image']->move(public_path('images'), $imageName);
+                    $data['json'][$index]['image'] = 'images/' . $imageName;
+                } else {
+                    // Giữ lại ảnh cũ nếu không có ảnh mới
+                    if (isset($block->json[$index]['image'])) {
+                        $data['json'][$index]['image'] = $block->json[$index]['image'];
+                    }
+                }
+            }
+        }
+        if ($request->has('json1')) {
+            foreach ($data['json1'] as $index => $jsonData) {
+                if (isset($jsonData['image']) && $jsonData['image'] instanceof \Illuminate\Http\UploadedFile) {
+                    $imageName = time() . '_' . $jsonData['image']->getClientOriginalName();
+                    $imagePath = $jsonData['image']->move(public_path('images'), $imageName);
+                    $data['json1'][$index]['image'] = 'images/' . $imageName;
+                } else {
+                    // Giữ lại ảnh cũ nếu không có ảnh mới
+                    if (isset($block->json[$index]['image'])) {
+                        $data['json1'][$index]['image'] = $block->json[$index]['image'];
+                    }
+                }
+            }
+        }
+        if ($request->has('json2')) {
+            foreach ($data['json2'] as $index => $jsonData) {
+                if (isset($jsonData['image']) && $jsonData['image'] instanceof \Illuminate\Http\UploadedFile) {
+                    $imageName = time() . '_' . $jsonData['image']->getClientOriginalName();
+                    $imagePath = $jsonData['image']->move(public_path('images'), $imageName);
+                    $data['json2'][$index]['image'] = 'images/' . $imageName;
+                } else {
+                    // Giữ lại ảnh cũ nếu không có ảnh mới
+                    if (isset($block->json[$index]['image'])) {
+                        $data['json2'][$index]['image'] = $block->json[$index]['image'];
+                    }
+                }
+            }
+        }
+        if ($request->has('json3')) {
+            foreach ($data['json3'] as $index => $jsonData) {
+                if (isset($jsonData['image']) && $jsonData['image'] instanceof \Illuminate\Http\UploadedFile) {
+                    $imageName = time() . '_' . $jsonData['image']->getClientOriginalName();
+                    $imagePath = $jsonData['image']->move(public_path('images'), $imageName);
+                    $data['json3'][$index]['image'] = 'images/' . $imageName;
+                } else {
+                    // Giữ lại ảnh cũ nếu không có ảnh mới
+                    if (isset($block->json[$index]['image'])) {
+                        $data['json3'][$index]['image'] = $block->json[$index]['image'];
+                    }
+                }
+            }
+        }
+        if ($request->has('json4')) {
+            foreach ($data['json4'] as $index => $jsonData) {
+                if (isset($jsonData['image']) && $jsonData['image'] instanceof \Illuminate\Http\UploadedFile) {
+                    $imageName = time() . '_' . $jsonData['image']->getClientOriginalName();
+                    $imagePath = $jsonData['image']->move(public_path('images'), $imageName);
+                    $data['json4'][$index]['image'] = 'images/' . $imageName;
+                } else {
+                    // Giữ lại ảnh cũ nếu không có ảnh mới
+                    if (isset($block->json[$index]['image'])) {
+                        $data['json4'][$index]['image'] = $block->json[$index]['image'];
+                    }
+                }
+            }
+        }
+        if ($request->has('json5')) {
+            foreach ($data['json5'] as $index => $jsonData) {
+                if (isset($jsonData['image']) && $jsonData['image'] instanceof \Illuminate\Http\UploadedFile) {
+                    $imageName = time() . '_' . $jsonData['image']->getClientOriginalName();
+                    $imagePath = $jsonData['image']->move(public_path('images'), $imageName);
+                    $data['json5'][$index]['image'] = 'images/' . $imageName;
+                } else {
+                    // Giữ lại ảnh cũ nếu không có ảnh mới
+                    if (isset($block->json[$index]['image'])) {
+                        $data['json5'][$index]['image'] = $block->json[$index]['image'];
+                    }
+                }
+            }
+        }
+
         $block->update($data);
 
         return redirect()->route('landingpage.admin')->with('success', 'Block updated successfully');

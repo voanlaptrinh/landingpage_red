@@ -26,9 +26,9 @@ class DatabaseSeeder extends Seeder
                 'title' => 'block01',
                 'order' => 1,
                 'status' => 1
-    
+
             ],
-           
+
         );
         DB::table('landingpages')->insert(
             [
@@ -99,20 +99,90 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit aenean ligula eget dolor. Aenean massa. Cum sociis natoque penatibus magnis parturient montes nascetur ridiculus. ',
                 'link' => '#',
                 'link1' => 'https://www.youtube.com/watch?v=MLpWrANjFbI',
-               'images' => '/landing/Working-at-Office.png',
+                'images' => '/landing/Working-at-Office.png',
                 'landingpage_id' => 1
             ],
         );
         DB::table('blocks')->insert(
             [
                 'block_type' => 'block02',
-                'title' => 'block2',
-                'title1' => 'block2',
-                'title2' => 'block2',
-                'title3' => 'block2',
-                'title4' => 'block2',
-                'title5' => 'block2',
+                'title' => 'We Collaborate With Professional Designers Around The World',
+                'json' => json_encode([
+                    [
+                        'key' => 'Drawing Sketch',
+                        'value' => 'Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.',
+                        'link' => '#',
+                        'image' => '/landing/icon-5.png',
+
+                    ],
+                    [
+                        'key' => 'Drawing Sketch',
+                        'value' => 'Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.',
+                        'link' => '#',
+                        'image' => '/landing/icon-5.png',
+
+                    ],
+                    [
+                        'key' => 'Drawing Sketch',
+                        'value' => 'Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.',
+                        'link' => '#',
+                        'image' => '/landing/icon-5.png',
+
+                    ],
+                    [
+                        'key' => 'Drawing Sketch',
+                        'value' => 'Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.',
+                        'link' => '#',
+                        'image' => '/landing/icon-5.png',
+
+                    ],
+                    [
+                        'key' => 'Drawing Sketch',
+                        'value' => 'Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.',
+                        'link' => '#',
+                        'image' => '/landing/icon-5.png',
+
+                    ],
+                    [
+                        'key' => 'Drawing Sketch',
+                        'value' => 'Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.',
+                        'link' => '#',
+                        'image' => '/landing/icon-5.png',
+
+                    ],
+                ]),
+
                 'landingpage_id' => 2
+            ],
+        );
+        DB::table('blocks')->insert(
+            [
+                'block_type' => 'block03',
+                'title' => 'Core Features',
+                'title1' => 'Learn More About Our Methodology',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit utelit nec ullamcorper mattis pulvinar dapibus.',
+                'json' => json_encode([
+                    [
+                        'key' => 'Trusted Platform',
+                    ],
+                    [
+                        'key' => 'Multi Purpose',
+                    ],
+                    [
+                        'key' => 'Security Ensured',
+                    ],
+                    [
+                        'key' => 'Real Interactions',
+                    ],
+                    [
+                        'key' => 'User Experience',
+                    ],
+                    
+                ]),
+
+                'images' => '/landing/Woman-Pose-98BS3LD-e1658281232137.png',
+
+                'landingpage_id' => 3
             ],
         );
     }

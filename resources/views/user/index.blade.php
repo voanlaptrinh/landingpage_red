@@ -9,7 +9,8 @@
 <!-- resources/views/landingpages/index.blade.php -->
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
@@ -17,110 +18,13 @@
     <title>Madesign &#8211; Online Design Courses Elementor Template Kit by Jegtheme</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Feed" href="feed/index.html" />
-    <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Comments Feed" href="comments/feed/index.html" />
-    <script>
-        window._wpemojiSettings = {
-            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
-            "ext": ".png",
-            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
-            "svgExt": ".svg",
-            "source": {
-                "concatemoji": "https:\/\/templatekit.jegtheme.com\/madesign\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.1"
-            }
-        };
-        /*! This file is auto-generated */
-        ! function(i, n) {
-            var o, s, e;
-
-            function c(e) {
-                try {
-                    var t = {
-                        supportTests: e,
-                        timestamp: (new Date).valueOf()
-                    };
-                    sessionStorage.setItem(o, JSON.stringify(t))
-                } catch (e) {}
-            }
-
-            function p(e, t, n) {
-                e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);
-                var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data),
-                    r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data));
-                return t.every(function(e, t) {
-                    return e === r[t]
-                })
-            }
-
-            function u(e, t, n) {
-                switch (t) {
-                    case "flag":
-                        return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");
-                    case "emoji":
-                        return !n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")
-                }
-                return !1
-            }
-
-            function f(e, t, n) {
-                var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"),
-                    a = r.getContext("2d", {
-                        willReadFrequently: !0
-                    }),
-                    o = (a.textBaseline = "top", a.font = "600 32px Arial", {});
-                return e.forEach(function(e) {
-                    o[e] = t(a, e, n)
-                }), o
-            }
-
-            function t(e) {
-                var t = i.createElement("script");
-                t.src = e, t.defer = !0, i.head.appendChild(t)
-            }
-            "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = {
-                everything: !0,
-                everythingExceptFlag: !0
-            }, e = new Promise(function(e) {
-                i.addEventListener("DOMContentLoaded", e, {
-                    once: !0
-                })
-            }), new Promise(function(t) {
-                var n = function() {
-                    try {
-                        var e = JSON.parse(sessionStorage.getItem(o));
-                        if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests
-                    } catch (e) {}
-                    return null
-                }();
-                if (!n) {
-                    if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try {
-                        var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));",
-                            r = new Blob([e], {
-                                type: "text/javascript"
-                            }),
-                            a = new Worker(URL.createObjectURL(r), {
-                                name: "wpTestEmojiSupports"
-                            });
-                        return void(a.onmessage = function(e) {
-                            c(n = e.data), a.terminate(), t(n)
-                        })
-                    } catch (e) {}
-                    c(n = f(s, u, p))
-                }
-                t(n)
-            }).then(function(e) {
-                for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]);
-                n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function() {
-                    n.DOMReady = !0
-                }
-            }).then(function() {
-                return e
-            }).then(function() {
-                var e;
-                n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)))
-            }))
-        }((window, document), window._wpemojiSettings);
-    </script>
-    <link rel='stylesheet' id='jkit-elements-main-css' href='/users/wp-content/plugins/jeg-elementor-kit/assets/css/elements/main61da.css?ver=2.6.2' media='all' />
+    <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Comments Feed"
+        href="comments/feed/index.html" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+    <link rel='stylesheet' id='jkit-elements-main-css'
+        href='/users/wp-content/plugins/jeg-elementor-kit/assets/css/elements/main61da.css' media='all' />
     <style id='wp-emoji-styles-inline-css'>
         img.wp-smiley,
         img.emoji {
@@ -135,10 +39,11 @@
             padding: 0 !important;
         }
     </style>
-    <link rel='stylesheet' id='wp-block-library-css' href='/users/wp-includes/css/dist/block-library/style.minaec2.css?ver=6.4.1' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='/users/wp-includes/css/dist/block-library/style.minaec2.css?ver=6.4.1' media='all' />
     <style id='classic-theme-styles-inline-css'>
         /*! This file is auto-generated */
-        
+
         .wp-block-button__link {
             color: #fff;
             background-color: #32373c;
@@ -148,7 +53,7 @@
             padding: calc(.667em + 2px) calc(1.333em + 2px);
             font-size: 1.125em
         }
-        
+
         .wp-block-file__button {
             background: #32373c;
             color: #fff;
@@ -198,376 +103,413 @@
             --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
             --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
         }
-        
+
         :where(.is-layout-flex) {
             gap: 0.5em;
         }
-        
+
         :where(.is-layout-grid) {
             gap: 0.5em;
         }
-        
+
         body .is-layout-flow>.alignleft {
             float: left;
             margin-inline-start: 0;
             margin-inline-end: 2em;
         }
-        
+
         body .is-layout-flow>.alignright {
             float: right;
             margin-inline-start: 2em;
             margin-inline-end: 0;
         }
-        
+
         body .is-layout-flow>.aligncenter {
             margin-left: auto !important;
             margin-right: auto !important;
         }
-        
+
         body .is-layout-constrained>.alignleft {
             float: left;
             margin-inline-start: 0;
             margin-inline-end: 2em;
         }
-        
+
         body .is-layout-constrained>.alignright {
             float: right;
             margin-inline-start: 2em;
             margin-inline-end: 0;
         }
-        
+
         body .is-layout-constrained>.aligncenter {
             margin-left: auto !important;
             margin-right: auto !important;
         }
-        
+
         body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
             max-width: var(--wp--style--global--content-size);
             margin-left: auto !important;
             margin-right: auto !important;
         }
-        
+
         body .is-layout-constrained>.alignwide {
             max-width: var(--wp--style--global--wide-size);
         }
-        
+
         body .is-layout-flex {
             display: flex;
         }
-        
+
         body .is-layout-flex {
             flex-wrap: wrap;
             align-items: center;
         }
-        
+
         body .is-layout-flex>* {
             margin: 0;
         }
-        
+
         body .is-layout-grid {
             display: grid;
         }
-        
+
         body .is-layout-grid>* {
             margin: 0;
         }
-        
+
         :where(.wp-block-columns.is-layout-flex) {
             gap: 2em;
         }
-        
+
         :where(.wp-block-columns.is-layout-grid) {
             gap: 2em;
         }
-        
+
         :where(.wp-block-post-template.is-layout-flex) {
             gap: 1.25em;
         }
-        
+
         :where(.wp-block-post-template.is-layout-grid) {
             gap: 1.25em;
         }
-        
+
         .has-black-color {
             color: var(--wp--preset--color--black) !important;
         }
-        
+
         .has-cyan-bluish-gray-color {
             color: var(--wp--preset--color--cyan-bluish-gray) !important;
         }
-        
+
         .has-white-color {
             color: var(--wp--preset--color--white) !important;
         }
-        
+
         .has-pale-pink-color {
             color: var(--wp--preset--color--pale-pink) !important;
         }
-        
+
         .has-vivid-red-color {
             color: var(--wp--preset--color--vivid-red) !important;
         }
-        
+
         .has-luminous-vivid-orange-color {
             color: var(--wp--preset--color--luminous-vivid-orange) !important;
         }
-        
+
         .has-luminous-vivid-amber-color {
             color: var(--wp--preset--color--luminous-vivid-amber) !important;
         }
-        
+
         .has-light-green-cyan-color {
             color: var(--wp--preset--color--light-green-cyan) !important;
         }
-        
+
         .has-vivid-green-cyan-color {
             color: var(--wp--preset--color--vivid-green-cyan) !important;
         }
-        
+
         .has-pale-cyan-blue-color {
             color: var(--wp--preset--color--pale-cyan-blue) !important;
         }
-        
+
         .has-vivid-cyan-blue-color {
             color: var(--wp--preset--color--vivid-cyan-blue) !important;
         }
-        
+
         .has-vivid-purple-color {
             color: var(--wp--preset--color--vivid-purple) !important;
         }
-        
+
         .has-black-background-color {
             background-color: var(--wp--preset--color--black) !important;
         }
-        
+
         .has-cyan-bluish-gray-background-color {
             background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
         }
-        
+
         .has-white-background-color {
             background-color: var(--wp--preset--color--white) !important;
         }
-        
+
         .has-pale-pink-background-color {
             background-color: var(--wp--preset--color--pale-pink) !important;
         }
-        
+
         .has-vivid-red-background-color {
             background-color: var(--wp--preset--color--vivid-red) !important;
         }
-        
+
         .has-luminous-vivid-orange-background-color {
             background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
         }
-        
+
         .has-luminous-vivid-amber-background-color {
             background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
         }
-        
+
         .has-light-green-cyan-background-color {
             background-color: var(--wp--preset--color--light-green-cyan) !important;
         }
-        
+
         .has-vivid-green-cyan-background-color {
             background-color: var(--wp--preset--color--vivid-green-cyan) !important;
         }
-        
+
         .has-pale-cyan-blue-background-color {
             background-color: var(--wp--preset--color--pale-cyan-blue) !important;
         }
-        
+
         .has-vivid-cyan-blue-background-color {
             background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
         }
-        
+
         .has-vivid-purple-background-color {
             background-color: var(--wp--preset--color--vivid-purple) !important;
         }
-        
+
         .has-black-border-color {
             border-color: var(--wp--preset--color--black) !important;
         }
-        
+
         .has-cyan-bluish-gray-border-color {
             border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
         }
-        
+
         .has-white-border-color {
             border-color: var(--wp--preset--color--white) !important;
         }
-        
+
         .has-pale-pink-border-color {
             border-color: var(--wp--preset--color--pale-pink) !important;
         }
-        
+
         .has-vivid-red-border-color {
             border-color: var(--wp--preset--color--vivid-red) !important;
         }
-        
+
         .has-luminous-vivid-orange-border-color {
             border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
         }
-        
+
         .has-luminous-vivid-amber-border-color {
             border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
         }
-        
+
         .has-light-green-cyan-border-color {
             border-color: var(--wp--preset--color--light-green-cyan) !important;
         }
-        
+
         .has-vivid-green-cyan-border-color {
             border-color: var(--wp--preset--color--vivid-green-cyan) !important;
         }
-        
+
         .has-pale-cyan-blue-border-color {
             border-color: var(--wp--preset--color--pale-cyan-blue) !important;
         }
-        
+
         .has-vivid-cyan-blue-border-color {
             border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
         }
-        
+
         .has-vivid-purple-border-color {
             border-color: var(--wp--preset--color--vivid-purple) !important;
         }
-        
+
         .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
             background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
         }
-        
+
         .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
             background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
         }
-        
+
         .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
             background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
         }
-        
+
         .has-luminous-vivid-orange-to-vivid-red-gradient-background {
             background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
         }
-        
+
         .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
             background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
         }
-        
+
         .has-cool-to-warm-spectrum-gradient-background {
             background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
         }
-        
+
         .has-blush-light-purple-gradient-background {
             background: var(--wp--preset--gradient--blush-light-purple) !important;
         }
-        
+
         .has-blush-bordeaux-gradient-background {
             background: var(--wp--preset--gradient--blush-bordeaux) !important;
         }
-        
+
         .has-luminous-dusk-gradient-background {
             background: var(--wp--preset--gradient--luminous-dusk) !important;
         }
-        
+
         .has-pale-ocean-gradient-background {
             background: var(--wp--preset--gradient--pale-ocean) !important;
         }
-        
+
         .has-electric-grass-gradient-background {
             background: var(--wp--preset--gradient--electric-grass) !important;
         }
-        
+
         .has-midnight-gradient-background {
             background: var(--wp--preset--gradient--midnight) !important;
         }
-        
+
         .has-small-font-size {
             font-size: var(--wp--preset--font-size--small) !important;
         }
-        
+
         .has-medium-font-size {
             font-size: var(--wp--preset--font-size--medium) !important;
         }
-        
+
         .has-large-font-size {
             font-size: var(--wp--preset--font-size--large) !important;
         }
-        
+
         .has-x-large-font-size {
             font-size: var(--wp--preset--font-size--x-large) !important;
         }
-        
+
         .wp-block-navigation a:where(:not(.wp-element-button)) {
             color: inherit;
         }
-        
+
         :where(.wp-block-post-template.is-layout-flex) {
             gap: 1.25em;
         }
-        
+
         :where(.wp-block-post-template.is-layout-grid) {
             gap: 1.25em;
         }
-        
+
         :where(.wp-block-columns.is-layout-flex) {
             gap: 2em;
         }
-        
+
         :where(.wp-block-columns.is-layout-grid) {
             gap: 2em;
         }
-        
+
         .wp-block-pullquote {
             font-size: 1.5em;
             line-height: 1.6;
         }
     </style>
-    <link rel='stylesheet' id='allow-webp-image-css' href='/users/wp-content/plugins/allow-webp-image/public/css/allow-webp-image-publicf269.css?ver=1.0.1' media='all' />
-    <link rel='stylesheet' id='template-kit-export-css' href='/users/wp-content/plugins/template-kit-export/public/assets/css/template-kit-export-public.min365c.css?ver=1.0.21' media='all' />
-    <link rel='stylesheet' id='elementor-icons-css' href='/users/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min192d.css?ver=5.23.0' media='all' />
-    <link rel='stylesheet' id='elementor-frontend-css' href='/users/wp-content/plugins/elementor/assets/css/frontend-lite.min8864.css?ver=3.17.3' media='all' />
-    <link rel='stylesheet' id='swiper-css' href='/users/wp-content/plugins/elementor/assets/lib/swiper/css/swiper.min48f5.css?ver=5.3.6' media='all' />
-    <link rel='stylesheet' id='elementor-post-3-css' href='/users/wp-content/uploads/sites/303/elementor/css/post-30c16.css?ver=1673932946' media='all' />
-    <link rel='stylesheet' id='elementor-global-css' href='/users/wp-content/uploads/sites/303/elementor/css/global0c16.css?ver=1673932946' media='all' />
-    <link rel='stylesheet' id='elementor-post-125-css' href='/users/wp-content/uploads/sites/303/elementor/css/post-1252387.css?ver=1678695184' media='all' />
-    <link rel='stylesheet' id='font-awesome-5-all-css' href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min8864.css?ver=3.17.3' media='all' />
-    <link rel='stylesheet' id='font-awesome-4-shim-css' href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min8864.css?ver=3.17.3' media='all' />
-    <link rel='stylesheet' id='text-editor-style-css' href='/users/wp-content/plugins/metform/public/assets/css/text-editor9e95.css?ver=3.8.0' media='all' />
-    <link rel='stylesheet' id='hello-elementor-css' href='/users/wp-content/themes/hello-elementor/style.minc141.css?ver=2.6.1' media='all' />
-    <link rel='stylesheet' id='hello-elementor-theme-style-css' href='/users/wp-content/themes/hello-elementor/theme.minc141.css?ver=2.6.1' media='all' />
-    <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.4.1'
+    <link rel='stylesheet' id='allow-webp-image-css'
+        href='/users/wp-content/plugins/allow-webp-image/public/css/allow-webp-image-publicf269.css?ver=1.0.1'
         media='all' />
-    <link rel='stylesheet' id='elementor-icons-jkiticon-css' href='/users/wp-content/plugins/jeg-elementor-kit/assets/fonts/jkiticon/jkiticon61da.css?ver=2.6.2' media='all' />
-    <link rel='stylesheet' id='elementor-icons-shared-0-css' href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css?ver=5.15.3' media='all' />
-    <link rel='stylesheet' id='elementor-icons-fa-solid-css' href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3' media='all' />
-    <link rel='stylesheet' id='elementor-icons-fa-regular-css' href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min52d5.css?ver=5.15.3' media='all' />
+    <link rel='stylesheet' id='template-kit-export-css'
+        href='/users/wp-content/plugins/template-kit-export/public/assets/css/template-kit-export-public.min365c.css?ver=1.0.21'
+        media='all' />
+    <link rel='stylesheet' id='elementor-icons-css'
+        href='/users/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min192d.css?ver=5.23.0'
+        media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css'
+        href='/users/wp-content/plugins/elementor/assets/css/frontend-lite.min8864.css?ver=3.17.3' media='all' />
+    <link rel='stylesheet' id='swiper-css'
+        href='/users/wp-content/plugins/elementor/assets/lib/swiper/css/swiper.min48f5.css?ver=5.3.6' media='all' />
+    <link rel='stylesheet' id='elementor-post-3-css'
+        href='/users/wp-content/uploads/sites/303/elementor/css/post-30c16.css?ver=1673932946' media='all' />
+    <link rel='stylesheet' id='elementor-global-css'
+        href='/users/wp-content/uploads/sites/303/elementor/css/global0c16.css?ver=1673932946' media='all' />
+    <link rel='stylesheet' id='elementor-post-125-css'
+        href='/users/wp-content/uploads/sites/303/elementor/css/post-1252387.css?ver=1678695184' media='all' />
+    <link rel='stylesheet' id='font-awesome-5-all-css'
+        href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min8864.css?ver=3.17.3'
+        media='all' />
+    <link rel='stylesheet' id='font-awesome-4-shim-css'
+        href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min8864.css?ver=3.17.3'
+        media='all' />
+    <link rel='stylesheet' id='text-editor-style-css'
+        href='/users/wp-content/plugins/metform/public/assets/css/text-editor9e95.css?ver=3.8.0' media='all' />
+    <link rel='stylesheet' id='hello-elementor-css'
+        href='/users/wp-content/themes/hello-elementor/style.minc141.css?ver=2.6.1' media='all' />
+    <link rel='stylesheet' id='hello-elementor-theme-style-css'
+        href='/users/wp-content/themes/hello-elementor/theme.minc141.css?ver=2.6.1' media='all' />
+    <link rel='stylesheet' id='google-fonts-1-css'
+        href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.4.1'
+        media='all' />
+    <link rel='stylesheet' id='elementor-icons-jkiticon-css'
+        href='/users/wp-content/plugins/jeg-elementor-kit/assets/fonts/jkiticon/jkiticon61da.css?ver=2.6.2'
+        media='all' />
+    <link rel='stylesheet' id='elementor-icons-shared-0-css'
+        href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css?ver=5.15.3'
+        media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-solid-css'
+        href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3'
+        media='all' />
+    <link rel='stylesheet' id='elementor-icons-fa-regular-css'
+        href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min52d5.css?ver=5.15.3'
+        media='all' />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <script src="/users/wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
     <script src="/users/wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
-    <script src="/users/wp-content/plugins/allow-webp-image/public/js/allow-webp-image-publicf269.js?ver=1.0.1" id="allow-webp-image-js"></script>
-    <script src="/users/wp-content/plugins/template-kit-export/public/assets/js/template-kit-export-public.min365c.js?ver=1.0.21" id="template-kit-export-js"></script>
-    <script src="/users/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min8864.js?ver=3.17.3" id="font-awesome-4-shim-js"></script>
+    <script src="/users/wp-content/plugins/allow-webp-image/public/js/allow-webp-image-publicf269.js?ver=1.0.1"
+        id="allow-webp-image-js"></script>
+    <script
+        src="/users/wp-content/plugins/template-kit-export/public/assets/js/template-kit-export-public.min365c.js?ver=1.0.21"
+        id="template-kit-export-js"></script>
+    <script src="/users/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min8864.js?ver=3.17.3"
+        id="font-awesome-4-shim-js"></script>
     <link rel="https://api.w.org/" href="wp-json/index.html" />
     <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/125.json" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
     <meta name="generator" content="WordPress 6.4.1" />
     <link rel="canonical" href="index.html" />
     <link rel='shortlink' href='index.html' />
-    <link rel="alternate" type="application/json+oembed" href="users/wp-json/oembed/1.0/embed9899.json?url=https%3A%2F%2Ftemplatekit.jegtheme.com%2Fmadesign%2F" />
-    <link rel="alternate" type="text/xml+oembed" href="users/wp-json/oembed/1.0/embed3506?url=https%3A%2F%2Ftemplatekit.jegtheme.com%2Fmadesign%2F&amp;format=xml" />
-    <meta name="generator" content="Elementor 3.17.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+    <link rel="alternate" type="application/json+oembed"
+        href="/users/wp-json/oembed/1.0/embed9899.json?url=https%3A%2F%2Ftemplatekit.jegtheme.com%2Fmadesign%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="users/wp-json/oembed/1.0/embed3506?url=https%3A%2F%2Ftemplatekit.jegtheme.com%2Fmadesign%2F&amp;format=xml" />
+    <meta name="generator"
+        content="Elementor 3.17.3; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
 </head>
 
-<body class="home page-template page-template-elementor_header_footer page page-id-125 jkit-color-scheme elementor-default elementor-template-full-width elementor-kit-3 elementor-page elementor-page-125">
-  
+<body
+    class="home page-template page-template-elementor_header_footer page page-id-125 jkit-color-scheme elementor-default elementor-template-full-width elementor-kit-3 elementor-page elementor-page-125">
+
     <div id="page" class="jkit-template  site">
         <div data-elementor-type="wp-page" data-elementor-id="125" class="elementor elementor-125">
-        @foreach ($landingpages as $landingPage)
-            @include('user.content.block01')
-            @include('user.content.block02')
-        @endforeach
-    
+            @foreach ($landingpages as $landingPage)
+                @include('user.content.block01')
+                @include('user.content.block02')
+                @include('user.content.block03')
+            @endforeach
+
+        </div>
     </div>
-    </div>
-   
+
 </body>
+
 </html>
