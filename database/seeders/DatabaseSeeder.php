@@ -152,6 +152,7 @@ class DatabaseSeeder extends Seeder
                     ],
                 ]),
 
+
                 'landingpage_id' => 2
             ],
         );
@@ -177,13 +178,38 @@ class DatabaseSeeder extends Seeder
                     [
                         'key' => 'User Experience',
                     ],
-                    
-                ]),
 
+                ]),
+                'json1' => json_encode([
+                    [
+                        'key' => '70',
+                        'value' => 'App Design',
+                    ],
+                    [
+                        'key' => '90',
+                        'value' => 'Brand Design',
+                    ],
+                    [
+                        'key' => '90',
+                        'value' => 'Web Design',
+                    ],
+                    [
+                        'key' => '96',
+                        'value' => '3D Illustration',
+                    ],
+                ]),
                 'images' => '/landing/Woman-Pose-98BS3LD-e1658281232137.png',
 
                 'landingpage_id' => 3
             ],
         );
+
+        DB::table('blocks')->insert([
+            'block_type' => 'block04',
+
+
+
+            'landingpage_id' => 4
+        ]);
     }
 }

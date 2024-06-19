@@ -19,6 +19,9 @@
                     @elseif($block->block_type == 'block03')
                         @include('admin.block_edit.block03')
                         <!-- Các trường khác của type3 -->
+                    @elseif($block->block_type == 'block04')
+                        @include('admin.block_edit.block04')
+                        <!-- Các trường khác của type3 -->
                     @endif
 
                     <div class="text-end pt-5">

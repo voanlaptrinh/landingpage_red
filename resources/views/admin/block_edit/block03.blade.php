@@ -37,10 +37,45 @@
                 </div>
             @endforeach
         </div>
+        <div class="text-center">
         <button type="button" id="add-field" class="btn btn-secondary mb-3">Thêm các lĩnh vực</button>
+        </div>
     </div>
     
 </div>
+
+<div class="col-lg-12">
+    <div class="col-lg-12 pt-3">
+        <div id="fields-container1">
+            @foreach ($block->json1 as $index => $item)
+                <div class="field-group1 mb-3">
+                    <div class="row">
+                     
+                        <div class="col">
+                            <input type="number" name="json1[{{ $index }}][key]" class="form-control" placeholder="Key"
+                                value="{{ $item['key'] }}" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="json1[{{ $index }}][value]" class="form-control" placeholder="value"
+                                value="{{ $item['value'] }}" required>
+                        </div>
+                      
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-danger remove-field1">Xóa</button>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <div class="text-center">
+        <button type="button" id="add-field1" class="btn btn-secondary mb-3 ">Thêm các lĩnh vực</button>
+    </div>
+    </div>
+    
+</div>
+
+
+
 
 <script>
     $(document).ready(function() {
@@ -65,6 +100,34 @@
 
         $(document).on('click', '.remove-field', function() {
             $(this).closest('.field-group').remove();
+        });
+
+
+
+        $('#add-field1').click(function() {
+            let fieldIndex = $('.field-group1').length;
+            let fieldHtml = `
+                <div class="field-group mb-3">
+                    <div class="row">
+                       
+                        <div class="col">
+                            <input type="number" name="json1[${fieldIndex}][key]" class="form-control" placeholder="Key" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="json1[${fieldIndex}][value]" class="form-control" placeholder="Value" required>
+                        </div>
+                      
+                        <div class="col-auto ">
+                            <button type="button" class="btn btn-danger remove-field1">Xóa</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('#fields-container1').append(fieldHtml);
+        });
+
+        $(document).on('click', '.remove-field1', function() {
+            $(this).closest('.field-group1').remove();
         });
     });
 </script>

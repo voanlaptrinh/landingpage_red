@@ -60,7 +60,7 @@
                                         data-widget_type="icon-list.default">
                                         <div class="elementor-widget-container">
     
-                                            <ul class="elementor-icon-list-items">
+                                            <ul class="elementor-icon-list-items" style="list-style-type: none;">
                                                 @if (!empty($landingPage->block->json))
                                                 @foreach ($landingPage->block->json as $item)
                                                 <li class="elementor-icon-list-item">
@@ -80,81 +80,14 @@
                             <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-359f525"
                                 data-id="359f525" data-element_type="column">
                                 <div class="elementor-widget-wrap elementor-element-populated">
+                                    @if (!empty($landingPage->block->json1))
+                                    @foreach ($landingPage->block->json1 as $item)
                                     <div class="elementor-element elementor-element-64568e5 elementor-widget__width-initial elementor-widget-mobile__width-auto elementor-widget elementor-widget-jkit_pie_chart"
                                         data-id="64568e5" data-element_type="widget"
                                         data-widget_type="jkit_pie_chart.default">
                                         <div class="elementor-widget-container">
                                             <div class="jeg-elementor-kit jkit-pie-chart style-static  jeg_module_125_14_66699f1093fac"
-                                                data-cutout="95" data-percent="62" data-color-type="gradient"
-                                                data-color="" data-bg-color="#313648" data-gradient1="#AC01FF"
-                                                data-gradient2="#1DCFFC" data-animation-duration="3600"
-                                                data-content-type="percentage">
-                                                <div class="pie-chart-wrapper">
-                                                    <span class="pie-chart-content">23%</span>
-                                                    <canvas class="main-canvas" height="130"
-                                                        width="130"></canvas>
-                                                    <canvas class="background-canvas" height="130"
-                                                        width="130"></canvas>
-                                                </div>
-                                                <h2 class="pie-chart-title">App Design</h2>
-                                                <div class="pie-chart-description">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-e315833 elementor-widget__width-initial elementor-widget-mobile__width-auto elementor-widget elementor-widget-jkit_pie_chart"
-                                        data-id="e315833" data-element_type="widget"
-                                        data-widget_type="jkit_pie_chart.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="jeg-elementor-kit jkit-pie-chart style-static  jeg_module_125_15_66699f109a562"
-                                                data-cutout="95" data-percent="85" data-color-type="gradient"
-                                                data-color="" data-bg-color="#313648" data-gradient1="#1DCFFC"
-                                                data-gradient2="#AC01FF" data-animation-duration="3600"
-                                                data-content-type="percentage">
-                                                <div class="pie-chart-wrapper">
-                                                    <span class="pie-chart-content">0%</span>
-                                                    <canvas class="main-canvas" height="130"
-                                                        width="130"></canvas>
-                                                    <canvas class="background-canvas" height="130"
-                                                        width="130"></canvas>
-                                                </div>
-                                                <h2 class="pie-chart-title">Brand Design</h2>
-                                                <div class="pie-chart-description">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-a8a0ccb elementor-widget__width-initial elementor-widget-mobile__width-auto elementor-widget elementor-widget-jkit_pie_chart"
-                                        data-id="a8a0ccb" data-element_type="widget"
-                                        data-widget_type="jkit_pie_chart.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="jeg-elementor-kit jkit-pie-chart style-static  jeg_module_125_16_66699f10a051c"
-                                                data-cutout="95" data-percent="76" data-color-type="gradient"
-                                                data-color="" data-bg-color="#313648" data-gradient1="#1DCFFC"
-                                                data-gradient2="#AC01FF" data-animation-duration="3600"
-                                                data-content-type="percentage">
-                                                <div class="pie-chart-wrapper">
-                                                    <span class="pie-chart-content">0%</span>
-                                                    <canvas class="main-canvas" height="130"
-                                                        width="130"></canvas>
-                                                    <canvas class="background-canvas" height="130"
-                                                        width="130"></canvas>
-                                                </div>
-                                                <h2 class="pie-chart-title">Web Design</h2>
-                                                <div class="pie-chart-description">
-                                                    <p></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-9c8728a elementor-widget__width-initial elementor-widget-mobile__width-auto elementor-widget elementor-widget-jkit_pie_chart"
-                                        data-id="9c8728a" data-element_type="widget"
-                                        data-widget_type="jkit_pie_chart.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="jeg-elementor-kit jkit-pie-chart style-static  jeg_module_125_17_66699f10a33e3"
-                                                data-cutout="95" data-percent="96" data-color-type="gradient"
+                                                data-cutout="95" data-percent="{{$item['key']}}" data-color-type="gradient"
                                                 data-color="" data-bg-color="#313648" data-gradient1="#AC01FF"
                                                 data-gradient2="#1DCFFC" data-animation-duration="3600"
                                                 data-content-type="percentage">
@@ -165,13 +98,15 @@
                                                     <canvas class="background-canvas" height="130"
                                                         width="130"></canvas>
                                                 </div>
-                                                <h2 class="pie-chart-title">3D Illustration</h2>
+                                                <h2 class="pie-chart-title">{{$item['value']}}</h2>
                                                 <div class="pie-chart-description">
                                                     <p></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
+                                    @endif
                                 </div>
                             </div>
                         </div>
