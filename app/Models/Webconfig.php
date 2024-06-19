@@ -11,6 +11,6 @@ class Webconfig extends Model
     protected $table = 'webconfigs';
 
     protected $fillable = [
-        'title', 'images', 'description', 'email', 'address', 'phone', 'facebook', 'youtube', 'twitter', 'telegram', 'zalo'
+        'title', 'images', 'description', 'email', 'address', 'phone', 'facebook', 'youtube', 'twitter', 'telegram', 'zalo', 'instagram'
     ];
 }

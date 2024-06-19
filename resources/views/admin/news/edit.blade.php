@@ -10,11 +10,21 @@
                 <form method="POST" action="{{route('news.update', $newsItem->id)}}" class="row" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <label for="title" class="form-label">Tiêu đề</label>
                         <input type="text" class="form-control" id="title" name="title"
                             value="{{ $newsItem->title }}">
                         @error('title')
+                            <span class="invalid-feedback" role="alert">
+                                <label class="error" id="name_error" for="name">{{ $message }}</label>
+                            </span>
+                        @enderror
+                    </div>
+                    <div class="col-md-6">
+                        <label for="category" class="form-label">Danh mục</label>
+                        <input type="text" class="form-control" id="category" name="category"
+                            value="{{ $newsItem->category }}">
+                        @error('category')
                             <span class="invalid-feedback" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>

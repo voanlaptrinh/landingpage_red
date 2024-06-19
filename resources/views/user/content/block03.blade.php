@@ -59,19 +59,20 @@
                                         data-id="0a1baff" data-element_type="widget"
                                         data-widget_type="icon-list.default">
                                         <div class="elementor-widget-container">
-    
+
                                             <ul class="elementor-icon-list-items" style="list-style-type: none;">
                                                 @if (!empty($landingPage->block->json))
-                                                @foreach ($landingPage->block->json as $item)
-                                                <li class="elementor-icon-list-item">
-                                                    <span class="elementor-icon-list-icon">
-                                                        <i aria-hidden="true" class="fas fa-check"></i> </span>
-                                                    <span class="elementor-icon-list-text">{{ $item['key'] ? $item['key'] : '' }}</span>
-                                                </li>
-                                                @endforeach
+                                                    @foreach ($landingPage->block->json as $item)
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+                                                                <i aria-hidden="true" class="fas fa-check"></i> </span>
+                                                            <span
+                                                                class="elementor-icon-list-text">{{ $item['key'] ? $item['key'] : '' }}</span>
+                                                        </li>
+                                                    @endforeach
                                                 @endif
-                                               
-                                                
+
+
                                             </ul>
                                         </div>
                                     </div>
@@ -81,31 +82,32 @@
                                 data-id="359f525" data-element_type="column">
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     @if (!empty($landingPage->block->json1))
-                                    @foreach ($landingPage->block->json1 as $item)
-                                    <div class="elementor-element elementor-element-64568e5 elementor-widget__width-initial elementor-widget-mobile__width-auto elementor-widget elementor-widget-jkit_pie_chart"
-                                        data-id="64568e5" data-element_type="widget"
-                                        data-widget_type="jkit_pie_chart.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="jeg-elementor-kit jkit-pie-chart style-static  jeg_module_125_14_66699f1093fac"
-                                                data-cutout="95" data-percent="{{$item['key']}}" data-color-type="gradient"
-                                                data-color="" data-bg-color="#313648" data-gradient1="#AC01FF"
-                                                data-gradient2="#1DCFFC" data-animation-duration="3600"
-                                                data-content-type="percentage">
-                                                <div class="pie-chart-wrapper">
-                                                    <span class="pie-chart-content">0%</span>
-                                                    <canvas class="main-canvas" height="130"
-                                                        width="130"></canvas>
-                                                    <canvas class="background-canvas" height="130"
-                                                        width="130"></canvas>
-                                                </div>
-                                                <h2 class="pie-chart-title">{{$item['value']}}</h2>
-                                                <div class="pie-chart-description">
-                                                    <p></p>
+                                        @foreach ($landingPage->block->json1 as $item)
+                                            <div class="elementor-element elementor-element-64568e5 elementor-widget__width-initial elementor-widget-mobile__width-auto elementor-widget elementor-widget-jkit_pie_chart"
+                                                data-id="64568e5" data-element_type="widget"
+                                                data-widget_type="jkit_pie_chart.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="jeg-elementor-kit jkit-pie-chart style-static  jeg_module_125_14_66699f1093fac"
+                                                        data-cutout="95" data-percent="{{ $item['key'] }}"
+                                                        data-color-type="gradient" data-color=""
+                                                        data-bg-color="#313648" data-gradient1="#AC01FF"
+                                                        data-gradient2="#1DCFFC" data-animation-duration="3600"
+                                                        data-content-type="percentage">
+                                                        <div class="pie-chart-wrapper">
+                                                            <span class="pie-chart-content">0%</span>
+                                                            <canvas class="main-canvas" height="130"
+                                                                width="130"></canvas>
+                                                            <canvas class="background-canvas" height="130"
+                                                                width="130"></canvas>
+                                                        </div>
+                                                        <h2 class="pie-chart-title">{{ $item['value'] }}</h2>
+                                                        <div class="pie-chart-description">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
+                                        @endforeach
                                     @endif
                                 </div>
                             </div>
@@ -116,7 +118,3 @@
         </div>
     </section>
 @endif
-
-
-
-

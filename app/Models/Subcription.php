@@ -10,6 +10,6 @@ class Subcription extends Model
     use HasFactory;
     protected $table = 'subcription';
     protected $fillable = [
-        'title', 'price','description'
+        'title', 'price','description', 'content', 'images'
     ];
 }

@@ -21,7 +21,22 @@
                         <!-- Các trường khác của type3 -->
                     @elseif($block->block_type == 'block04')
                         @include('admin.block_edit.block04')
-                        <!-- Các trường khác của type3 -->
+                        <!-- Các trường khác của type4 -->
+                    @elseif($block->block_type == 'block05')
+                        @include('admin.block_edit.block05')
+                        <!-- Các trường khác của type5 -->
+                    @elseif($block->block_type == 'block06')
+                        @include('admin.block_edit.block06')
+                        <!-- Các trường khác của type6 -->
+                    @elseif($block->block_type == 'block07')
+                        @include('admin.block_edit.block07')
+                        <!-- Các trường khác của type7 -->
+                    @elseif($block->block_type == 'block08')
+                        @include('admin.block_edit.block08')
+                        <!-- Các trường khác của type8 -->
+                    @elseif($block->block_type == 'block09')
+                        @include('admin.block_edit.block09')
+                        <!-- Các trường khác của type9 -->
                     @endif
 
                     <div class="text-end pt-5">

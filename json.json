@@ -1,38 +1,22 @@
 [
     {
-        "key": "Drawing Sketch",
-        "value": "Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.",
-        "link": "#",
-        "image": "\/landing\/icon-5.png"
+        "key": "Select Your Courses",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.",
+        "image": "\/landing\/drafting-compass-solid.svg"
     },
     {
-        "key": "Drawing Sketch",
-        "value": "Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.",
-        "link": "#",
-        "image": "\/landing\/icon-5.png"
+        "key": "Make An Appointment",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.",
+        "image": "\/landing\/poll-h-solid.svg"
     },
     {
-        "key": "Drawing Sketch",
-        "value": "Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.",
-        "link": "#",
-        "image": "\/landing\/icon-5.png"
+        "key": "Purchase Your Courses",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.",
+        "image": "\/landing\/credit-card-solid.svg"
     },
     {
-        "key": "Drawing Sketch",
-        "value": "Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.",
-        "link": "#",
-        "image": "\/landing\/icon-5.png"
-    },
-    {
-        "key": "Drawing Sketch",
-        "value": "Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.",
-        "link": "#",
-        "image": "\/landing\/icon-5.png"
-    },
-    {
-        "key": "Drawing Sketch",
-        "value": "Lorem ipsum dolor sit ame, consect adipiscing elitse do eiusmod elit.",
-        "link": "#",
-        "image": "\/landing\/icon-5.png"
+        "key": "Enjoy Your Courses",
+        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.",
+        "image": "\/landing\/pencil-ruler-solid.svg"
     }
 ]

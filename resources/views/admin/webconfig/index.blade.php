@@ -74,8 +74,8 @@
                         <input type="text" class="form-control" id="telegram" value="{{ $webConfig->telegram }}">
                     </div>
                     <div class="col-md-4">
-                        <label for="zalo" class="form-label">Zalo</label>
-                        <input type="text" class="form-control" id="zalo" value="{{ $webConfig->zalo }}">
+                        <label for="instagram" class="form-label">Instagram</label>
+                        <input type="text" class="form-control" id="instagram" value="{{ $webConfig->instagram }}">
                     </div>
                     <div class="text-end pt-4">
                         <button type="submit" class="btn btn-primary">Submit</button>

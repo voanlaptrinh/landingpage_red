@@ -13,13 +13,48 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(NewsSeeder::class);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
+        DB::table('subcription')->insert([
+            'title' => 'Gói Design',
+            'price' => 23333,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+            'images' => '/icon-5.png',
+            'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+        ]);
+        DB::table('subcription')->insert([
+            'title' => 'Gói Web',
+            'price' => 23333,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+            'images' => '/icon-5.png',
+            'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+        ]);
+        DB::table('subcription')->insert([
+            'title' => 'Gói Design',
+            'price' => 23333,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+            'images' => '/icon-5.png',
+            'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+        ]);
+        DB::table('subcription')->insert([
+            'title' => 'Gói web',
+            'price' => 23333,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+            'images' => '/icon-5.png',
+            'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+        ]);
+        DB::table('subcription')->insert([
+            'title' => 'Gói Design',
+            'price' => 23333,
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+            'images' => '/icon-5.png',
+            'content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+        ]);
 
         DB::table('landingpages')->insert(
             [
@@ -79,11 +114,16 @@ class DatabaseSeeder extends Seeder
                 'status' => 1
             ],
         );
+      
         DB::table('webConfigs')->insert(
             [
                 'title' => 'Landingpages',
                 'email' => 'info@example.com',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                                                tellus, luctus nec ullamcorper mattis pulvinar.',
+                'address' => 'Puputan Renon East ST. 1190, Bali',
                 'phone' => '0921933797',
+              'instagram' => '#',
                 'facebook' => '#',
                 'youtube' => '#',
                 'twitter' => '#',
@@ -204,12 +244,138 @@ class DatabaseSeeder extends Seeder
             ],
         );
 
+        DB::table('blocks')->insert(
+            [
+                'block_type' => 'block04',
+                'title' => 'Core Features',
+                'title1' => 'Our Best Online Course For You',
+                'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua veniam.',
+
+
+                'landingpage_id' => 4
+            ]
+        );
+
         DB::table('blocks')->insert([
-            'block_type' => 'block04',
+            'block_type' => 'block05',
+            'title' => 'How We Works',
+            'title1' => 'Our Working Process',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+            'json' => json_encode([
+                [
+                    'key' => 'Select Your Courses',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/drafting-compass-solid.svg',
 
+                ],
+                [
+                    'key' => 'Make An Appointment',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/poll-h-solid.svg',
 
+                ],
+                [
+                    'key' => 'Purchase Your Courses',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/credit-card-solid.svg',
 
-            'landingpage_id' => 4
+                ],
+                [
+                    'key' => 'Enjoy Your Courses',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/pencil-ruler-solid.svg',
+
+                ],
+
+            ]),
+            'images' => '/landing/Team-Work-WR9ZE5V.png',
+
+            'landingpage_id' => 5
         ]);
+        DB::table('blocks')->insert([
+            'block_type' => 'block06',
+
+            'json' => json_encode([
+                [
+                    'number' => 128,
+                    'key' => 'K',
+                    'value' => 'Project Completed',
+                ],
+                [
+                    'number' => 38,
+                    'key' => '+',
+                    'value' => 'Years Experience',
+                ],
+                [
+                    'number' => 100,
+                    'key' => '%',
+                    'value' => 'Money Back',
+                ],
+                [
+                    'number' => 63,
+                    'key' => '+',
+                    'value' => 'Expert Team',
+                ],
+                [
+                    'number' => 270,
+                    'key' => 'K',
+                    'value' => 'Creative Practice',
+                ],
+
+
+            ]),
+
+
+            'landingpage_id' => 6
+        ]);
+
+        DB::table('blocks')->insert([
+            'block_type' => 'block07',
+            'title' => 'Testimonial',
+            'title1' => 'Our Clients Said',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.',
+            'link' => '#',
+            'json' => json_encode([
+                [
+                    'key' => 'Andrira Hens',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/attractive-older-man-smiling-PQ3VUFU-150x150.jpg',
+
+                ],
+                [
+                    'key' => 'Michael Doe',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/portrait-of-good-looking-brunette-woman-smiles-too-UCETKXG-150x150.jpg',
+
+                ],
+                [
+                    'key' => 'Christin Jerre',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/indoor-shot-of-attractive-european-schoolgirl-has-LEUUQRK-150x150.jpg',
+
+                ],
+                [
+                    'key' => 'John Doe',
+                    'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed do eiusmod tempor labore magna elit.',
+                    'image' => '/landing/pleased-cheerful-redhaired-male-with-pleasant-smil-CCXAYZL-150x150.jpg',
+
+                ],
+
+            ]),
+            'images' => '/landing/Team-Work-WR9ZE5V.png',
+
+            'landingpage_id' => 7
+        ]);
+
+
+        DB::table('blocks')->insert([
+            'block_type' => 'block08',
+            'title' => 'Our Blog',
+            'title1' => 'Lates Blog & Articles',
+            'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua veniam.',
+            'link' => '#',
+            'landingpage_id' => 8
+        ]);
+        
     }
 }

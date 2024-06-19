@@ -25,10 +25,12 @@ class NewsController extends Controller
             'description' => 'required|string',
             'content' => 'string',
             'images' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'category' => 'required|string',
         ],
         [
             'title.required' => 'Tiêu đề tin tức là bắt buộc',
             'title.max' => 'Tối đã 255 kí tự',
+            'category.required' => 'Danh mục là bắt buộc',
             'description.required' => 'Mô tả ngắn là bắt buộc',
             'images.required' => 'Ảnh là bắt buộc',
             'images.image'=>'Phải bắt buộc là ảnh',
@@ -44,6 +46,7 @@ class NewsController extends Controller
             'description' => $request->description,
             'content' => $request->content,
             'images' => $imageName,
+            'category' => $request->category,
         ]);
 
         return redirect()->route('news.admin')->with('success', 'Tin tức đã được thêm mới thành công!');
@@ -65,6 +68,7 @@ class NewsController extends Controller
             'description' => 'required|string',
             'content' => 'string',
             'images' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'category' => 'required|string',
         ],
         [
             'title.required' => 'Tiêu đề tin tức là bắt buộc',
@@ -73,7 +77,8 @@ class NewsController extends Controller
             'images.required' => 'Ảnh là bắt buộc',
             'images.image'=>'Phải bắt buộc là ảnh',
             'images.mimes'=>'Ảnh chỉ được là dạng jpeg, png, jpg, gif',
-            'images.max' => 'Chỉ kích thước là 2M'
+            'images.max' => 'Chỉ kích thước là 2M',
+            'category.required' => 'Danh mục là bắt buộc',
         ]);
 
         $newsItem = News::findOrFail($id);
@@ -89,6 +94,7 @@ class NewsController extends Controller
             'description' => $request->description,
             'content' => $request->content,
             'images' => $imageName,
+            'category' => $request->category,
         ]);
 
         return redirect()->route('news.admin')->with('success', 'Tin tức đã được cập nhật thành công!');

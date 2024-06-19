@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->integer('phone')->nullable();
             $table->string('email')->nullable();
-            $table->string('content')->nullable();
+            $table->text('content')->nullable();
             $table->unsignedBigInteger('subcription_id');
             $table->timestamps();
             $table->foreign('subcription_id')->references('id')->on('subcription')->onDelete('cascade');

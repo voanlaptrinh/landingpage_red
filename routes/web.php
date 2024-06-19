@@ -4,9 +4,13 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlockLandingController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\SubcriptionController;
 use App\Http\Controllers\Admin\WebConfigController;
 use App\Http\Controllers\LandingpageController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\UserContactController;
+use App\Http\Controllers\UserNewsController;
+use App\Models\Subcription;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,8 +26,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index'])->name('landingpage');
 Route::post('/upload-image', [UploadController::class, 'uploadImage'])->name('upload-image');
-
-
+Route::prefix('/news')->group(function () {
+    Route::get('/', [UserNewsController::class, 'index'])->name('newsUser.index');
+    Route::get('/{id}/detail', [UserNewsController::class, 'detail'])->name('newsUser.detail');
+});
+Route::prefix('/contact')->group(function () {
+    Route::get('/', [UserContactController::class, 'index'])->name('contact.index');
+});
 Route::prefix('/admin')->group(function () {
 
     Route::get('/', [DashboardController::class, 'index'])->name('landingpage.admin');
@@ -33,6 +42,18 @@ Route::prefix('/admin')->group(function () {
     Route::get('/{id}/blockLandingPage', [BlockLandingController::class, 'index'])->name('block.admin');
     Route::put('/blocks/{id}/updateBlock', [BlockLandingController::class, 'update'])->name('blocks.update');
     
+    //subcription
+    Route::prefix('/subcription')->group(function () {
+        Route::get('/', [SubcriptionController::class, 'index'])->name('subcription.admin');
+        Route::get('/create', [SubcriptionController::class, 'create'])->name('subcription.create');
+        Route::post('/subcription', [SubcriptionController::class, 'store'])->name('subcription.store');
+        Route::get('/{id}/edit', [SubcriptionController::class, 'edit'])->name('subcription.edit');
+        Route::put('/{id}/update', [SubcriptionController::class, 'update'])->name('subcription.update');
+        Route::delete('/news/{id}', [SubcriptionController::class, 'destroy'])->name('subcription.destroy');
+        Route::get('/{id}/detail', [SubcriptionController::class, 'detail'])->name('subcription.detail');
+    });
+
+
     //Tin tức
     Route::prefix('/news')->group(function () {
         Route::get('/', [NewsController::class, 'index'])->name('news.admin');

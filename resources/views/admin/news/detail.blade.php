@@ -14,6 +14,7 @@
                         <img style="width: 100px; height: 100px;" src="{{ asset('images/' . $newsItem->images) }}"
                             style="" alt="Profile" class="rounded-circle">
                         <h2>{{ $newsItem->title }}</h2>
+                        <p>Danh mục: {{$newsItem->category}}</p>
                         <h6>{{ $newsItem->created_at }}</h6>
                     </div>
                 </div>
@@ -39,7 +40,7 @@
                                 <p class="small fst-italic">{{ $newsItem->description }}</p>
                             </div>
                             <div class="tab-pane fade profile-edit pt-3" id="profile-edit" role="tabpanel">
-                                <div class="container content-detail-news">
+                                <div class="container content-detail-newssubcription">
                                     {!! $newsItem->content !!}
                                 </div>
                             </div>

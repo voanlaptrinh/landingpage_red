@@ -9,7 +9,12 @@
                 <span>Landingpage</span>
             </a>
         </li><!-- End Dashboard Nav -->
-
+        <li class="nav-item {{ Request::route()->getName() == 'subcription.admin' ? 'active-sidebar' : '' }}">
+            <a class="nav-link " href="{{ route('subcription.admin') }}">
+                <i class="ri-settings-2-line"></i>
+                <span>Subcription</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
         <li
             class="nav-item {{ Request::route()->getName() == 'news.admin' ? 'active-sidebar' : '' }}{{ Request::route()->getName() == 'news.create' ? 'active-sidebar' : '' }}{{ Request::route()->getName() == 'news.edit' ? 'active-sidebar' : '' }}{{ Request::route()->getName() == 'news.detail' ? 'active-sidebar' : '' }}">
             <a class="nav-link " href="{{ route('news.admin') }}">

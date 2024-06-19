@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->integer('price')->nullable();
             $table->string('description')->nullable();
+            $table->string('images')->nullable();
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }
@@ -28,3 +30,5 @@ return new class extends Migration
         Schema::dropIfExists('subcription');
     }
 };
+
+
