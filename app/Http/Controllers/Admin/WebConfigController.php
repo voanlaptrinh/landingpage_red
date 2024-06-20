@@ -26,15 +26,22 @@ class WebConfigController extends Controller
         $webConfig->telegram = $request->input('telegram');
         $webConfig->zalo = $request->input('zalo');
 
-        // Xử lý lưu ảnh logo nếu được cập nhật
-        if ($request->hasFile('logo')) {
-            $logo = $request->file('logo');
-            $path = $logo->store('uploads', 'public'); // Lưu ảnh vào thư mục 'uploads' trong thư mục 'public'
+         // Handle the logo file upload if a new logo is uploaded
+    if ($request->hasFile('logo')) {
+        // Validate the file (optional, but recommended)
+        $request->validate([
+            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
 
-            // Lấy đường dẫn tương đối của ảnh
-            $webConfig->logo = '/storage/' . $path;
-        }
+        // Generate a unique name for the image
+        $imageName = time() . '.' . $request->logo->extension();
 
+        // Move the image to the public/images directory
+        $request->logo->move(public_path('images'), $imageName);
+
+        // Save the image name to the webConfig
+        $webConfig->logo = $imageName;
+    }
         $webConfig->save();
 
         return redirect()->route('webconfig.admin')->with('success', 'Thông tin website đã được cập nhật thành công.');

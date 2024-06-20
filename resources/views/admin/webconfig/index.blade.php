@@ -12,7 +12,7 @@
                     <label class="custum-file-upload" for="file">
                         <div class="icon">
                             @if (!empty($webConfig->logo))
-                                <img width="150px" src="{{ asset( $webConfig->logo) }}" alt="">
+                                <img width="150px" src="{{ asset('images/' . $webConfig->logo) }}" alt="">
                             @else
                             <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
                                 <g stroke-width="0" id="SVGRepo_bgCarrier"></g>

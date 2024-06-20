@@ -1,5 +1,6 @@
 @extends('user.index')
 @section('content')
+<div data-elementor-type="wp-page" data-elementor-id="1270" class="elementor elementor-1270">
     <section
         class="elementor-section elementor-top-section elementor-element elementor-element-b42a4ee elementor-section-boxed elementor-section-height-default elementor-section-height-default"
         data-id="b42a4ee" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -119,19 +120,9 @@
                                                     <div class="elementor-widget-container">
 
                                                         <div id="metform-wrap-c82d8bf-1285" class="mf-form-wrapper"
-                                                            data-form-id="1285"
-                                                            data-action="https://templatekit.jegtheme.com/madesign/wp-json/metform/v1/entries/insert/1285"
-                                                            data-wp-nonce="5df75d2abb" data-form-nonce="68571f73cf"
-                                                            data-quiz-summery="false" data-save-progress="false"
-                                                            data-form-type="contact_form" data-stop-vertical-effect="">
-                                                            <form class="metform-form-content">
-                                                                <div class="mf-main-response-wrap   mf-response-msg-wrap"
-                                                                    data-show="0">
-                                                                    <div class="mf-response-msg"><i
-                                                                            class="mf-success-icon fas fa-check"></i>
-                                                                        <p></p>
-                                                                    </div>
-                                                                </div>
+                                                            data-form-id="1285">
+                                                            <form class="metform-form-content" action="{{route('contact.store')}}" method="POST">
+                                                                @csrf
                                                                 <div class="metform-form-main-wrapper">
                                                                     <div data-elementor-type="wp-post"
                                                                         data-elementor-id="1285"
@@ -148,10 +139,7 @@
                                                                                     <div
                                                                                         class="elementor-widget-wrap elementor-element-populated">
                                                                                         <div class="elementor-element elementor-element-6be3190f elementor-widget elementor-widget-mf-text"
-                                                                                            data-id="6be3190f"
-                                                                                            data-element_type="widget"
-                                                                                            data-settings="{&quot;mf_input_name&quot;:&quot;mf-first-name&quot;}"
-                                                                                            data-widget_type="mf-text.default">
+                                                                                            data-id="6be3190f">
                                                                                             <div
                                                                                                 class="elementor-widget-container">
                                                                                                 <div
@@ -159,17 +147,19 @@
                                                                                                     <input type="text"
                                                                                                         class="mf-input "
                                                                                                         id="mf-input-text-6be3190f"
-                                                                                                        name="mf-first-name"
-                                                                                                        placeholder="Your Name "
+                                                                                                        name="title" value="{{old('title')}}"
+                                                                                                        placeholder="Tiêu đề"
                                                                                                         aria-invalid="false">
                                                                                                 </div>
+                                                                                                @error('title')
+                                                                                                <span class="" role="alert">
+                                                                                                    <label style="color: red" class="error" id="name_error" for="name">{{ $message }}</label>
+                                                                                                </span>
+                                                                                            @enderror
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="elementor-element elementor-element-5a8cfd55 elementor-widget elementor-widget-mf-email"
-                                                                                            data-id="5a8cfd55"
-                                                                                            data-element_type="widget"
-                                                                                            data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}"
-                                                                                            data-widget_type="mf-email.default">
+                                                                                            data-id="5a8cfd55">
                                                                                             <div
                                                                                                 class="elementor-widget-container">
                                                                                                 <div
@@ -177,43 +167,51 @@
                                                                                                     <input type="email"
                                                                                                         class="mf-input "
                                                                                                         id="mf-input-email-5a8cfd55"
-                                                                                                        name="mf-email"
-                                                                                                        placeholder="Your Email "
-                                                                                                        aria-invalid="false"
-                                                                                                        value="">
+                                                                                                        name="email"
+                                                                                                        placeholder="Email"
+                                                                                                       value="{{old('email')}}">
                                                                                                 </div>
+                                                                                                @error('email')
+                                                                                                <span class="" role="alert">
+                                                                                                    <label style="color: red" class="error" id="name_error" for="name">{{ $message }}</label>
+                                                                                                </span>
+                                                                                            @enderror
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="elementor-element elementor-element-5df5e7ea elementor-widget elementor-widget-mf-text"
-                                                                                            data-id="5df5e7ea"
-                                                                                            data-element_type="widget"
-                                                                                            data-settings="{&quot;mf_input_name&quot;:&quot;mf-subject&quot;}"
-                                                                                            data-widget_type="mf-text.default">
+                                                                                            data-id="5df5e7ea">
                                                                                             <div
                                                                                                 class="elementor-widget-container">
                                                                                                 <div
                                                                                                     class="mf-input-wrapper">
-                                                                                                    <input type="text"
+                                                                                                    <input type="number"
                                                                                                         class="mf-input "
                                                                                                         id="mf-input-text-5df5e7ea"
-                                                                                                        name="mf-subject"
-                                                                                                        placeholder="Your Subject "
+                                                                                                        name="phone" value="{{old('phone')}}"
+                                                                                                        placeholder="Số điện thoại"
                                                                                                         aria-invalid="false">
                                                                                                 </div>
+                                                                                                @error('phone')
+                                                                                                <span class="" role="alert">
+                                                                                                    <label style="color: red" class="error" id="name_error" for="name">{{ $message }}</label>
+                                                                                                </span>
+                                                                                            @enderror
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="elementor-element elementor-element-6240300f elementor-widget elementor-widget-mf-textarea"
-                                                                                            data-id="6240300f"
-                                                                                            data-element_type="widget"
-                                                                                            data-settings="{&quot;mf_input_name&quot;:&quot;mf-comment&quot;}"
-                                                                                            data-widget_type="mf-textarea.default">
+                                                                                            data-id="6240300f">
                                                                                             <div
                                                                                                 class="elementor-widget-container">
                                                                                                 <div
                                                                                                     class="mf-input-wrapper">
-                                                                                                    <textarea class="mf-input mf-textarea " id="mf-input-text-area-6240300f" name="mf-comment"
-                                                                                                        placeholder="Your Message " cols="30" rows="10" aria-invalid="false"></textarea>
+                                                                                                    <textarea class="mf-input mf-textarea " id="mf-input-text-area-6240300f" name="content"
+                                                                                                        placeholder="Nội dung" cols="30" rows="10" >{{old('content')}}</textarea>
                                                                                                 </div>
+                                                                                                @error('content')
+                                                                                                <span class="" role="alert">
+                                                                                                    <label style="color: red" class="error" id="name_error" for="name">{{ $message }}</label>
+                                                                                                </span>
+                                                                                            @enderror
                                                                                             </div>
                                                                                         </div>
                                                                                         <div class="elementor-element elementor-element-5f32da55 mf-btn--justify mf-btn--tablet-justify mf-btn--mobile-justify elementor-widget elementor-widget-mf-button"
@@ -226,7 +224,7 @@
                                                                                                     data-mf-form-conditional-logic-requirement="">
                                                                                                     <button type="submit"
                                                                                                         class="metform-btn metform-submit-btn "
-                                                                                                        id=""><span>Submit
+                                                                                                        id=""><span>Gửi nội dung
                                                                                                         </span></button>
                                                                                                 </div>
                                                                                             </div>
@@ -239,12 +237,6 @@
                                                                 </div>
                                                             </form>
                                                         </div>
-
-
-
-
-
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -274,47 +266,13 @@
                     <div class="elementor-element elementor-element-24eb2a71 elementor-widget elementor-widget-heading"
                         data-id="24eb2a71" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
-                            <h2 class="elementor-heading-title elementor-size-default">Get In Touch</h2>
+                            <h2 class="elementor-heading-title elementor-size-default">Contact Us</h2>
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-3d21d64a elementor-widget elementor-widget-text-editor"
                         data-id="3d21d64a" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                            <style>
-                                /*! elementor - v3.17.0 - 08-11-2023 */
-                                .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
-                                    background-color: #69727d;
-                                    color: #fff
-                                }
-
-                                .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
-                                    color: #69727d;
-                                    border: 3px solid;
-                                    background-color: transparent
-                                }
-
-                                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
-                                    margin-top: 8px
-                                }
-
-                                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
-                                    width: 1em;
-                                    height: 1em
-                                }
-
-                                .elementor-widget-text-editor .elementor-drop-cap {
-                                    float: left;
-                                    text-align: center;
-                                    line-height: 1;
-                                    font-size: 50px
-                                }
-
-                                .elementor-widget-text-editor .elementor-drop-cap-letter {
-                                    display: inline-block
-                                }
-                            </style>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor incididunt ut
-                                labore et dolore magna aliquat enim adiqua consectetur.</p>
+                           
                         </div>
                     </div>
                     <div class="elementor-element elementor-element-80ab3ce elementor-widget__width-auto jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box"
@@ -341,10 +299,11 @@
                             <div
                                 class="jeg-elementor-kit jkit-heading  align-left align-tablet- align-mobile- jeg_module_1270_4_66699f41c06dd">
                                 <div class="heading-section-title  display-inline-block">
-                                    <h2 class="heading-title">Our Office</h2>
+                                    <h2 class="heading-title">Địa chỉ</h2>
                                 </div>
                                 <div class="heading-section-description">
-                                    <p>Puputan Renon ST. 1190, Bali</p>
+                                    
+                                    <p>{{$webConfigs->address}}</p>
                                 </div>
                             </div>
                         </div>
@@ -434,9 +393,9 @@
                             <div
                                 class="jeg-elementor-kit jkit-heading  align-left align-tablet- align-mobile- jeg_module_1270_6_66699f41c4343">
                                 <div class="heading-section-title  display-inline-block">
-                                    <h2 class="heading-title">Our Email</h2>
+                                    <h2 class="heading-title">Email</h2>
                                 </div>
-                                <div class="heading-section-description">madesign@support.com</div>
+                                <div class="heading-section-description">{{$webConfigs->email}}</div>
                             </div>
                         </div>
                     </div>
@@ -472,10 +431,10 @@
                             <div
                                 class="jeg-elementor-kit jkit-heading  align-left align-tablet- align-mobile- jeg_module_1270_8_66699f41c6cfb">
                                 <div class="heading-section-title  display-inline-block">
-                                    <h2 class="heading-title">Our Phone</h2>
+                                    <h2 class="heading-title">Phone</h2>
                                 </div>
                                 <div class="heading-section-description">
-                                    <p>(+62) 123-321-543</p>
+                                    <p>{{$webConfigs->phone}}</p>
                                 </div>
                             </div>
                         </div>
@@ -512,10 +471,10 @@
                             <div
                                 class="jeg-elementor-kit jkit-heading  align-left align-tablet- align-mobile- jeg_module_1270_10_66699f41ca3e4">
                                 <div class="heading-section-title  display-inline-block">
-                                    <h2 class="heading-title">Our Hotline</h2>
+                                    <h2 class="heading-title">Số điện thoại</h2>
                                 </div>
                                 <div class="heading-section-description">
-                                    <p>1280-0821</p>
+                                    <p>{{$webConfigs->phone}}</p>
                                 </div>
                             </div>
                         </div>
@@ -524,4 +483,5 @@
             </div>
         </div>
     </section>
+</div>
 @endsection

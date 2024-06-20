@@ -1,5 +1,6 @@
 @extends('user.index')
 @section('content')
+
     @foreach ($landingpages as $landingPage)
         @include('user.content.block01')
         @include('user.content.block02')

@@ -67,7 +67,7 @@
                                                     <div class="jkit-post-meta-bottom">
                                                         <div class="jkit-meta-readmore icon-position-after">
                                                             <a href="{{ route('newsUser.detail', $new->id) }}"
-                                                                class="jkit-readmore">Read More<i aria-hidden="true"
+                                                                class="jkit-readmore">Đọc thêm<i aria-hidden="true"
                                                                     class="fas fa-arrow-right"></i></a>
                                                         </div>
                                                     </div>

@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-@php
-    $webConfig = \App\Models\WebConfig::find(1);
-@endphp
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -483,9 +479,11 @@
         id="font-awesome-4-shim-js"></script>
 
 </head>
-
+@php
+    $webConfig = \App\Models\WebConfig::find(1);
+@endphp
 <body
-    class="home page-template page-template-elementor_header_footer page page-id-125 jkit-color-scheme elementor-default elementor-template-full-width elementor-kit-3 elementor-page elementor-page-125">
+    class="home page-template page-template-elementor_header_footer page page-id-125 jkit-color-scheme elementor-default elementor-template-full-width elementor-kit-3 texxx elementor-page elementor-page-125">
     <header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
 
         <div data-elementor-type="page" data-elementor-id="932" class="elementor elementor-932">
@@ -500,7 +498,7 @@
                                 data-id="ad2e3c3" data-element_type="widget" data-widget_type="image.default">
                                 <div class="elementor-widget-container">
 
-                                    <img src="/users/wp-content/uploads/sites/303/2022/07/logo-4VHCGH-e1658281351303.png"
+                                    <img src="{{ asset('images/' . $webConfig->logo) }}"
                                         class="attachment-full size-full wp-image-781" alt=""
                                         decoding="async" />
                                 </div>

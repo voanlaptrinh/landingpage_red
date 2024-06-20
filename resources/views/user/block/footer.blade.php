@@ -35,23 +35,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="elementor-element elementor-element-314f5c5 elementor-widget elementor-widget-heading"
-                                            data-id="314f5c5" data-element_type="widget"
-                                            data-widget_type="heading.default">
-                                            <div class="elementor-widget-container">
-                                                <h2 class="elementor-heading-title elementor-size-default">
-                                                    Subscribe Our Newsletter</h2>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-element elementor-element-d37e763 elementor-widget elementor-widget-text-editor"
-                                            data-id="d37e763" data-element_type="widget"
-                                            data-widget_type="text-editor.default">
-                                            <div class="elementor-widget-container">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                    do eiusmod tempor incididunt ut labore et dolore magna
-                                                    aliqua veniam.</p>
-                                            </div>
-                                        </div>
+                                      
                                         <div class="elementor-element elementor-element-91ddece elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-jkit_mailchimp"
                                             data-id="91ddece" data-element_type="widget"
                                             data-widget_type="jkit_mailchimp.default">
@@ -68,7 +52,7 @@
                                                                 <div class="jkit-form-group">
                                                                     <div
                                                                         class="jkit-input-element-container jkit-input-group">
-                                                                        <input type="email" name="email"
+                                                                        <input type="email" name="email" style="color: white"
                                                                             class="jkit-email jkit-form-control "
                                                                             placeholder="Your Email" required="">
                                                                     </div>
@@ -128,7 +112,7 @@
                                             data-id="02d96c8" data-element_type="widget"
                                             data-widget_type="icon-list.default">
                                             <div class="elementor-widget-container">
-                                                <ul class="elementor-icon-list-items elementor-inline-items">
+                                                <ul class="elementor-icon-list-items elementor-inline-items" style="list-style: none">
                                                     <li class="elementor-icon-list-item elementor-inline-item">
                                                         <a href="#">
 
@@ -235,7 +219,7 @@
                                             data-id="8f4c6ce" data-element_type="widget"
                                             data-widget_type="icon-list.default">
                                             <div class="elementor-widget-container">
-                                                <ul class="elementor-icon-list-items elementor-inline-items">
+                                                <ul class="elementor-icon-list-items elementor-inline-items" style="list-style: none">
                                                     <li class="elementor-icon-list-item elementor-inline-item">
                                                         <a href="#">
 

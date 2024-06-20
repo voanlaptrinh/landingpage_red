@@ -32,6 +32,7 @@ Route::prefix('/news')->group(function () {
 });
 Route::prefix('/contact')->group(function () {
     Route::get('/', [UserContactController::class, 'index'])->name('contact.index');
+    Route::post('/post-contact', [UserContactController::class, 'store'])->name('contact.store');
 });
 Route::prefix('/admin')->group(function () {
 

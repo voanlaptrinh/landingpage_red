@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class UserNewsController extends Controller
 {
     public function index(){
-        return view('user.news.index');
+        $news = News::orderBy('id', 'asc')->paginate(6);
+        return view('user.news.index', compact('news'));
     }
     public function detail($id)
     {

@@ -11,7 +11,7 @@
                             <div class="col-lg-12">
                                 <div class="row">
                                     <!-- Sales Card -->
-                                    <div class="col-xxl-12 col-md-6">
+                                    <div class="col-xxl-12">
                                         <div class="info-card sales-card">
                                             <div class="card-body">
                                                 <h5 class="card-title"> {{ $landingPage->title }}</h5>
@@ -26,7 +26,7 @@
 
                                                 </div>
                                                 <div class="d-flex justify-content-end">
-                                                    <div class="d-flex g-3">
+                                                   
                                                         <div class="">
                                                             <button class="btn btn-success text-white"
                                                                 data-bs-toggle="modal" data-bs-target="#editImageModal"
@@ -37,7 +37,7 @@
                                                             <a href="{{ route('block.admin', ['id' => $landingPage->id]) }}" class="btn btn-success text-white">Chi
                                                                 tiết</a>
                                                         </div>
-                                                    </div>
+                                                   
                                                 </div>
                                             </div>
 

@@ -123,7 +123,7 @@ class DatabaseSeeder extends Seeder
                                                 tellus, luctus nec ullamcorper mattis pulvinar.',
                 'address' => 'Puputan Renon East ST. 1190, Bali',
                 'phone' => '0921933797',
-              'instagram' => '#',
+                'instagram' => '#',
                 'facebook' => '#',
                 'youtube' => '#',
                 'twitter' => '#',
