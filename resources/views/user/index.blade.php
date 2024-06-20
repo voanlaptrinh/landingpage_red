@@ -480,7 +480,7 @@
 
 </head>
 @php
-    $webConfig = \App\Models\WebConfig::find(1);
+     $webConfig = \App\Models\WebConfig::find(1);
 @endphp
 <body
     class="home page-template page-template-elementor_header_footer page page-id-125 jkit-color-scheme elementor-default elementor-template-full-width elementor-kit-3 texxx elementor-page elementor-page-125">
@@ -575,7 +575,7 @@
     </header>
     <div id="page" class="jkit-template  site">
         <div data-elementor-type="wp-page" data-elementor-id="125" class="elementor elementor-125">
-            @yield('content')
+           
 
         </div>
     </div>
