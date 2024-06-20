@@ -530,7 +530,7 @@
                                                     </li>
                                                     <li id="menu-item-1412"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412">
-                                                        <a href="{{route('newsUser.index')}}">News</a>
+                                                        <a href="{{route('newsUser.index')}}">Tin tức</a>
                                                     </li>
 
 
