@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link rel="pingback" href="xmlrpc.html" />
-    <title>Madesign &#8211; Online Design Courses Elementor Template Kit by Jegtheme</title>
+    <title>{{$webConfig->title}}</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Feed" href="feed/index.html" />
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-30c16.css?ver=1.0.1">
     <link rel='stylesheet' id='jkit-elements-main-css'
         href='/users/wp-content/plugins/jeg-elementor-kit/assets/css/elements/main61da.css' media='all' />
+       <link href="{{ asset('/css/toastr.min.css') }}" rel="stylesheet">
     <style id='wp-emoji-styles-inline-css'>
         img.wp-smiley,
         img.emoji {
@@ -479,104 +481,14 @@
         id="font-awesome-4-shim-js"></script>
 
 </head>
-@php
-     $webConfig = \App\Models\WebConfig::find(1);
-@endphp
+
 <body
     class="home page-template page-template-elementor_header_footer page page-id-125 jkit-color-scheme elementor-default elementor-template-full-width elementor-kit-3 texxx elementor-page elementor-page-125">
-    <header id="masthead" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
-
-        <div data-elementor-type="page" data-elementor-id="932" class="elementor elementor-932">
-            <section
-                class="elementor-section elementor-top-section elementor-element elementor-element-bd87373 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                data-id="bd87373" data-element_type="section">
-                <div class="elementor-container elementor-column-gap-default">
-                    <div class="elementor-cFolumn elementor-col-25 elementor-top-column elementor-element elementor-element-0ce9c9e"
-                        data-id="0ce9c9e" data-element_type="column">
-                        <div class="elementor-widget-wrap elementor-element-populated">
-                            <div class="elementor-element elementor-element-ad2e3c3 elementor-widget elementor-widget-image"
-                                data-id="ad2e3c3" data-element_type="widget" data-widget_type="image.default">
-                                <div class="elementor-widget-container">
-
-                                    <img src="{{ asset('images/' . $webConfig->logo) }}"
-                                        class="attachment-full size-full wp-image-781" alt=""
-                                        decoding="async" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6c3c699"
-                        data-id="6c3c699" data-element_type="column">
-                        <div class="elementor-widget-wrap elementor-element-populated">
-                            <div class="elementor-element elementor-element-815d628 elementor-widget-tablet__width-auto elementor-widget elementor-widget-jkit_nav_menu"
-                                data-id="815d628" data-element_type="widget"
-                                data-widget_type="jkit_nav_menu.default">
-                                <div class="elementor-widget-container">
-                                    <div class="jeg-elementor-kit jkit-nav-menu break-point-tablet submenu-click-title jeg_module_125__66699f1000551"
-                                        data-item-indicator="&lt;i aria-hidden=&quot;true&quot; class=&quot;jki jki-angle-down-solid&quot;&gt;&lt;/i&gt;">
-                                        <button class="jkit-hamburger-menu"><i aria-hidden="true"
-                                                class="jki jki-bars-solid"></i></button>
-                                        <div class="jkit-menu-wrapper" style="height: 100%">
-                                            <div class="jkit-menu-container">
-                                                <ul id="menu-menu"
-                                                    class="jkit-menu jkit-menu-direction-flex jkit-submenu-position-top">
-                                                    <li id="menu-item-1413"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-125 current_page_item menu-item-1413">
-                                                        <a href="index.html" aria-current="page">Home</a>
-                                                    </li>
-                                                    <li id="menu-item-1412"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412">
-                                                        <a href="about/index.html">About</a>
-                                                    </li>
-                                                    <li id="menu-item-1412"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412">
-                                                        <a href="{{route('newsUser.index')}}">Tin tức</a>
-                                                    </li>
-
-
-                                                    <li id="menu-item-1405"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1405">
-                                                        <a href="{{ route('contact.index') }}">Contact</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-e9a4280 elementor-hidden-mobile elementor-hidden-tablet"
-                        data-id="e9a4280" data-element_type="column">
-                        <div class="elementor-widget-wrap elementor-element-populated">
-
-                            <div class="elementor-element elementor-element-b911347 elementor-widget__width-auto elementor-widget-mobile__width-inherit e-transform elementor-widget elementor-widget-button"
-                                data-id="b911347" data-element_type="widget"
-                                data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.9,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
-                                data-widget_type="button.default">
-                                <div class="elementor-widget-container">
-                                    <div class="elementor-button-wrapper">
-                                        <a class="elementor-button elementor-button-link elementor-size-sm"
-                                            href="">
-                                            <span class="elementor-button-content-wrapper">
-                                                <span class="elementor-button-text">Try Free Trial</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </header>
+    @include('user.block.header')
     <div id="page" class="jkit-template  site">
         <div data-elementor-type="wp-page" data-elementor-id="125" class="elementor elementor-125">
-           
 
+            @yield('content')
         </div>
     </div>
     <style>
@@ -594,20 +506,41 @@
     <link rel='stylesheet' id='tiny-slider-css'
         href='/users/wp-content/plugins/jeg-elementor-kit/assets/js/tiny-slider/tiny-sliderf342.css?ver=2.9.3'
         media='all' />
-    <link rel='stylesheet' id='elementor-post-935-css' href='/users/wp-content/uploads/sites/303/elementor/css/post-9359c36.css?ver=1673932949' media='all' />
+    <link rel='stylesheet' id='elementor-post-935-css'
+        href='/users/wp-content/uploads/sites/303/elementor/css/post-9359c36.css?ver=1673932949' media='all' />
     <link rel='stylesheet' id='elementor-icons-fa-brands-css'
         href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min52d5.css?ver=5.15.3'
         media='all' />
     <link rel='stylesheet' id='e-animations-css'
         href='/users/wp-content/plugins/elementor/assets/lib/animations/animations.min8864.css?ver=3.17.3'
         media='all' />
-    <script src="/users/wp-content/themes/hello-elementor/assets/js/hello-frontend.min8a54.js?ver=1.0.0" id="hello-theme-frontend-js"></script>
+    <script src="/users/wp-content/themes/hello-elementor/assets/js/hello-frontend.min8a54.js?ver=1.0.0"
+        id="hello-theme-frontend-js"></script>
     <script src="/users/wp-content/plugins/elementor/assets/js/webpack.runtime.min8864.js?ver=3.17.3"
         id="elementor-webpack-runtime-js"></script>
     <script src="/users/wp-content/plugins/elementor/assets/js/frontend-modules.min8864.js?ver=3.17.3"
         id="elementor-frontend-modules-js"></script>
-    <script src="/users/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+    <script src="/users/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2"
+        id="elementor-waypoints-js"></script>
     <script src="/users/wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+    <script src="{{ asset('/js/toastr.min.js') }}"></script>
+<script>
+    @if (Session::has('success'))
+        toastr.success("{{ Session::get('success') }}");
+    @endif
+
+    @if (Session::has('error'))
+        toastr.error("{{ Session::get('error') }}");
+    @endif
+
+    @if (Session::has('info'))
+        toastr.info("{{ Session::get('info') }}");
+    @endif
+
+    @if (Session::has('warning'))
+        toastr.warning("{{ Session::get('warning') }}");
+    @endif
+</script>
     <script id="elementor-frontend-js-before">
         var elementorFrontendConfig = {
             "environmentMode": {

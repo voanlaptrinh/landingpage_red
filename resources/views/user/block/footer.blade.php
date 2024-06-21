@@ -1,7 +1,5 @@
 <footer itemscope="itemscope" itemtype="https://schema.org/WPFooter">
-    @php
-        $webConfig = \App\Models\WebConfig::find(1);
-    @endphp
+   
     <div data-elementor-type="page" data-elementor-id="935" class="elementor elementor-935">
         <section
             class="elementor-section elementor-top-section elementor-element elementor-element-922f058 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -97,8 +95,8 @@
                                             data-id="acf8db4" data-element_type="widget"
                                             data-widget_type="image.default">
                                             <div class="elementor-widget-container">
-                                                <img width="800" height="180"
-                                                    src="/users/wp-content/uploads/sites/303/2022/07/logo-4VHCGH-e1658281351303.png"
+                                                <img style="width:110px"
+                                                    src="{{ isset($webConfig->logoFooter) ? asset('image/' . $webConfig->logoFooter) : asset('logofooter.png') }}"
                                                     class="attachment-full size-full wp-image-781" alt=""
                                                     decoding="async" loading="lazy" />
                                             </div>
@@ -111,7 +109,7 @@
                                         <div class="elementor-element elementor-element-02d96c8 elementor-icon-list--layout-inline elementor-align-center elementor-mobile-align-center elementor-tablet-align-left elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                             data-id="02d96c8" data-element_type="widget"
                                             data-widget_type="icon-list.default">
-                                            <div class="elementor-widget-container">
+                                            <div class="elementor-widget-container" style="display: flex; justify-content: center">
                                                 <ul class="elementor-icon-list-items elementor-inline-items" style="list-style: none">
                                                     <li class="elementor-icon-list-item elementor-inline-item">
                                                         <a href="#">
@@ -218,7 +216,7 @@
                                         <div class="elementor-element elementor-element-8f4c6ce elementor-icon-list--layout-inline elementor-align-left elementor-tablet-align-left elementor-mobile-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
                                             data-id="8f4c6ce" data-element_type="widget"
                                             data-widget_type="icon-list.default">
-                                            <div class="elementor-widget-container">
+                                            <div class="elementor-widget-container" >
                                                 <ul class="elementor-icon-list-items elementor-inline-items" style="list-style: none">
                                                     <li class="elementor-icon-list-item elementor-inline-item">
                                                         <a href="#">

@@ -16,7 +16,7 @@ class LandingpageController extends Controller
         $webConfig = Webconfig::find(1);
         
         $subcriptions = Subcription::orderBy('id', 'asc')->get();
-        return view('user.block.index', compact('landingpages','news','subcriptions'));
+        return view('user.block.index', compact('landingpages','news','subcriptions','webConfig'));
     }
  
 }

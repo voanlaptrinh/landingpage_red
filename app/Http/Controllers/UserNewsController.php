@@ -10,7 +10,8 @@ class UserNewsController extends Controller
 {
     public function index(){
         $news = News::orderBy('id', 'asc')->paginate(6);
-        return view('user.news.index', compact('news'));
+        $webConfig = Webconfig::find(1);
+        return view('user.news.index', compact('news','webConfig'));
     }
     public function detail($id)
     {

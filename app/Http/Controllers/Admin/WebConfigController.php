@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class WebConfigController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $webConfig = Webconfig::find(1);
         return view('admin.webconfig.index', compact('webConfig'));
     }
@@ -26,22 +27,38 @@ class WebConfigController extends Controller
         $webConfig->telegram = $request->input('telegram');
         $webConfig->zalo = $request->input('zalo');
 
-         // Handle the logo file upload if a new logo is uploaded
-    if ($request->hasFile('logo')) {
-        // Validate the file (optional, but recommended)
-        $request->validate([
-            'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+        // Handle the logo file upload if a new logo is uploaded
+        if ($request->hasFile('logo')) {
+            // Validate the file (optional, but recommended)
+            $request->validate([
+                'logo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
 
-        // Generate a unique name for the image
-        $imageName = time() . '.' . $request->logo->extension();
+            // Generate a unique name for the image
+            $imageName = time() . '.' . $request->logo->extension();
 
-        // Move the image to the public/images directory
-        $request->logo->move(public_path('images'), $imageName);
+            // Move the image to the public/images directory
+            $request->logo->move(public_path('images'), $imageName);
 
-        // Save the image name to the webConfig
-        $webConfig->logo = $imageName;
-    }
+            // Save the image name to the webConfig
+            $webConfig->logo = $imageName;
+        }
+        if ($request->hasFile('logoFooter')) {
+      
+            // Validate the file (optional, but recommended)
+            $request->validate([
+                'logoFooter' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+
+            // Generate a unique name for the image
+            $imageName = time() . '.' . $request->logoFooter->extension();
+
+            // Move the image to the public/images directory
+            $request->logoFooter->move(public_path('image'), $imageName);
+
+            // Save the image name to the webConfig
+            $webConfig->logoFooter = $imageName;
+        }
         $webConfig->save();
 
         return redirect()->route('webconfig.admin')->with('success', 'Thông tin website đã được cập nhật thành công.');

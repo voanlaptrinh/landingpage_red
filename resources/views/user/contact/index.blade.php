@@ -21,41 +21,8 @@
                                     <div class="elementor-element elementor-element-3e1c0af elementor-widget elementor-widget-heading"
                                         data-id="3e1c0af" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                            <style>
-                                                /*! elementor - v3.17.0 - 08-11-2023 */
-                                                .elementor-heading-title {
-                                                    padding: 0;
-                                                    margin: 0;
-                                                    line-height: 1
-                                                }
-
-                                                .elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-                                                    color: inherit;
-                                                    font-size: inherit;
-                                                    line-height: inherit
-                                                }
-
-                                                .elementor-widget-heading .elementor-heading-title.elementor-size-small {
-                                                    font-size: 15px
-                                                }
-
-                                                .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-                                                    font-size: 19px
-                                                }
-
-                                                .elementor-widget-heading .elementor-heading-title.elementor-size-large {
-                                                    font-size: 29px
-                                                }
-
-                                                .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-                                                    font-size: 39px
-                                                }
-
-                                                .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-                                                    font-size: 59px
-                                                }
-                                            </style>
-                                            <h1 class="elementor-heading-title elementor-size-default">Contact</h1>
+                                          
+                                            <h1 class="elementor-heading-title elementor-size-default">Liên hệ</h1>
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-c0d7bed elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -186,7 +153,7 @@
                                                                                                     class="mf-input-wrapper">
                                                                                                     <input type="number"
                                                                                                         class="mf-input "
-                                                                                                        id="mf-input-text-5df5e7ea"
+                                                                                                        id="phone"
                                                                                                         name="phone" value="{{old('phone')}}"
                                                                                                         placeholder="Số điện thoại"
                                                                                                         aria-invalid="false">
@@ -303,7 +270,7 @@
                                 </div>
                                 <div class="heading-section-description">
                                     
-                                    <p>{{$webConfigs->address}}</p>
+                                    <p>{{$webConfig->address}}</p>
                                 </div>
                             </div>
                         </div>
@@ -311,59 +278,7 @@
                     <div class="elementor-element elementor-element-41db1312 elementor-widget elementor-widget-spacer"
                         data-id="41db1312" data-element_type="widget" data-widget_type="spacer.default">
                         <div class="elementor-widget-container">
-                            <style>
-                                /*! elementor - v3.17.0 - 08-11-2023 */
-                                .elementor-column .elementor-spacer-inner {
-                                    height: var(--spacer-size)
-                                }
-
-                                .e-con {
-                                    --container-widget-width: 100%
-                                }
-
-                                .e-con-inner>.elementor-widget-spacer,
-                                .e-con>.elementor-widget-spacer {
-                                    width: var(--container-widget-width, var(--spacer-size));
-                                    --align-self: var(--container-widget-align-self, initial);
-                                    --flex-shrink: 0
-                                }
-
-                                .e-con-inner>.elementor-widget-spacer>.elementor-widget-container,
-                                .e-con>.elementor-widget-spacer>.elementor-widget-container {
-                                    height: 100%;
-                                    width: 100%
-                                }
-
-                                .e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer,
-                                .e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer {
-                                    height: 100%
-                                }
-
-                                .e-con-inner>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner,
-                                .e-con>.elementor-widget-spacer>.elementor-widget-container>.elementor-spacer>.elementor-spacer-inner {
-                                    height: var(--container-widget-height, var(--spacer-size))
-                                }
-
-                                .e-con-inner>.elementor-widget-spacer.elementor-widget-empty,
-                                .e-con>.elementor-widget-spacer.elementor-widget-empty {
-                                    position: relative;
-                                    min-height: 22px;
-                                    min-width: 22px
-                                }
-
-                                .e-con-inner>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon,
-                                .e-con>.elementor-widget-spacer.elementor-widget-empty .elementor-widget-empty-icon {
-                                    position: absolute;
-                                    top: 0;
-                                    bottom: 0;
-                                    left: 0;
-                                    right: 0;
-                                    margin: auto;
-                                    padding: 0;
-                                    width: 22px;
-                                    height: 22px
-                                }
-                            </style>
+                          
                             <div class="elementor-spacer">
                                 <div class="elementor-spacer-inner"></div>
                             </div>
@@ -395,7 +310,7 @@
                                 <div class="heading-section-title  display-inline-block">
                                     <h2 class="heading-title">Email</h2>
                                 </div>
-                                <div class="heading-section-description">{{$webConfigs->email}}</div>
+                                <div class="heading-section-description">{{$webConfig->email}}</div>
                             </div>
                         </div>
                     </div>
@@ -434,7 +349,7 @@
                                     <h2 class="heading-title">Phone</h2>
                                 </div>
                                 <div class="heading-section-description">
-                                    <p>{{$webConfigs->phone}}</p>
+                                    <p>{{$webConfig->phone}}</p>
                                 </div>
                             </div>
                         </div>
@@ -474,7 +389,7 @@
                                     <h2 class="heading-title">Số điện thoại</h2>
                                 </div>
                                 <div class="heading-section-description">
-                                    <p>{{$webConfigs->phone}}</p>
+                                    <p>{{$webConfig->phone}}</p>
                                 </div>
                             </div>
                         </div>

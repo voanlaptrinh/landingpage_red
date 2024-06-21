@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>@php
-    $webConfig = \App\Models\WebConfig::find(1);
-@endphp
+<head>
     <title>{{$webConfig->title}}</title>
     @include('admin.common.meta')
     
