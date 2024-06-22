@@ -21,6 +21,7 @@ class ContactController extends Controller
    public function EmailCotact()
    {
       $webConfig = Webconfig::find(1);
-      return view('admin.mailContact.index', compact('webConfig'));
+      $mailContacts = MailContact::orderBy('id', 'asc')->paginate(1);
+      return view('admin.mailContact.index', compact('webConfig','mailContacts'));
    }
 }

@@ -114,7 +114,8 @@ class SubcriptionController extends Controller
     public function detail($id)
     {
         $subcriptionItem = Subcription::findOrFail($id);
+        $webConfig = Webconfig::find(1);
         $subcriptionItem->content = $this->correctImagePaths($subcriptionItem->content);
-        return view('admin.subcription.detail', compact('subcriptionItem'));
+        return view('admin.subcription.detail', compact('subcriptionItem','webConfig'));
     }
 }

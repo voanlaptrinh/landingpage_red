@@ -7,6 +7,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link rel="pingback" href="xmlrpc.html" />
     <title>{{$webConfig->title}}</title>
+    <link href="{{ isset($webConfig->logo) ? asset('images/' . $webConfig->logo) : asset('logo.png') }}" rel="icon">
     <meta name='robots' content='max-image-preview:large' />
     <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Feed" href="feed/index.html" />
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">

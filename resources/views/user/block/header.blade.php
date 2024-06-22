@@ -41,10 +41,34 @@
                                                     <a href="{{ route('landingpage') }}"
                                                         aria-current="page">Trang chủ</a>
                                                 </li>
-                                                <li id="menu-item-1412"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412">
-                                                    <a href="about/index.html">About</a>
-                                                </li>
+                                                <li id="menu-item-15"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-15">
+                                                <a href="#">About</a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-1409"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1409">
+                                                        <a href="pricing/index.html">Pricing</a>
+                                                    </li>
+                                                    <li id="menu-item-1408"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1408">
+                                                        <a href="team/index.html">Team</a>
+                                                    </li>
+                                                    <li id="menu-item-1407"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1407">
+                                                        <a href="faq/index.html">FAQ</a>
+                                                    </li>
+                                                    <li id="menu-item-1406"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1406">
+                                                        <a href="blog/index.html">Blog</a>
+                                                    </li>
+                                                    <li id="menu-item-1415"
+                                                        class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1415">
+                                                        <a
+                                                            href="2022/07/15/hundreds-of-bike-sketches-from-memories-realized-in-3d-images/index.html">Single
+                                                            Post</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                                 <li id="menu-item-1412"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412">
                                                     <a href="{{ route('newsUser.index') }}">Tin tức</a>

@@ -184,15 +184,7 @@
                                             display: none;
                                             justify-content: end;
                                         }
-                                        /* .texxx a{
-                                            background: none;
-                                            color: #69727d;
-                                          margin-left: 10px 
-                                        }
-                                        .texxx{
-                                            color: black;
-                                           
-                                        } */
+                                      
                                     </style>
 
                                     <div class="pagination" style="display: flex; justify-content: end">
