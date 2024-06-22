@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Subcription;
+use App\Models\Webconfig;
 use Illuminate\Http\Request;
 
 class SubcriptionController extends Controller
@@ -11,11 +12,13 @@ class SubcriptionController extends Controller
     public function index()
     {
         $subcriptions = Subcription::all();
-        return view('admin.subcription.index', compact('subcriptions'));
+        $webConfig = Webconfig::find(1);
+        return view('admin.subcription.index', compact('subcriptions','webConfig'));
     }
     public function create(Request $request)
     {
-        return view('admin.subcription.create');
+        $webConfig = Webconfig::find(1);
+        return view('admin.subcription.create',compact('webConfig'));
     }
     public function store(Request $request)
     {
@@ -61,8 +64,9 @@ class SubcriptionController extends Controller
     public function edit($id)
     {
         $subcriptionItem = Subcription::findOrFail($id);
+        $webConfig = Webconfig::find(1);
         $subcriptionItem->content = $this->correctImagePaths($subcriptionItem->content);
-        return view('admin.subcription.edit', compact('subcriptionItem'));
+        return view('admin.subcription.edit', compact('subcriptionItem','webConfig'));
     }
     private function correctImagePaths($content)
 {

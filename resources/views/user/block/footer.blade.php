@@ -40,9 +40,8 @@
                                             <div class="elementor-widget-container">
                                                 <div
                                                     class="jeg-elementor-kit jkit-mailchimp style-inline jeg_module_744_12_66699f5b60af7">
-                                                    <form method="post" class="jkit-mailchimp-form" data-listed=""
-                                                        data-success-message="Successfully listed this email"
-                                                        data-error-message="Something went wrong">
+                                                    <form class="jkit-mailchimp-form" action="{{route('email.store')}}" method="POST">
+                                                        @csrf
                                                         <div class="jkit-mailchimp-message"></div>
                                                         <div class="jkit-form-wrapper email-form">
                                                             <div
@@ -60,7 +59,7 @@
                                                                 <button type="submit"
                                                                     class="jkit-mailchimp-submit position-before"
                                                                     name="jkit-mailchimp">
-                                                                    Subscribe
+                                                                    Gửi
                                                                 </button>
                                                             </div>
                                                         </div>

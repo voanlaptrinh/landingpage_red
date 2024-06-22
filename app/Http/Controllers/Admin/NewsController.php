@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\News;
+use App\Models\Webconfig;
 use Illuminate\Http\Request;
 
 class NewsController extends Controller
@@ -11,11 +12,13 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::all();
-        return view('admin.news.index', compact('news'));
+        $webConfig = Webconfig::find(1);
+        return view('admin.news.index', compact('news','webConfig'));
     }
     public function create(Request $request)
     {
-        return view('admin.news.create');
+        $webConfig = Webconfig::find(1);
+        return view('admin.news.create',compact('webConfig'));
     }
 
     public function store(Request $request)
@@ -54,8 +57,9 @@ class NewsController extends Controller
     public function edit($id)
     {
         $newsItem = News::findOrFail($id);
+        $webConfig = Webconfig::find(1);
         $newsItem->content = $this->correctImagePaths($newsItem->content);
-        return view('admin.news.edit', compact('newsItem'));
+        return view('admin.news.edit', compact('newsItem','webConfig'));
     }
     private function correctImagePaths($content)
 {

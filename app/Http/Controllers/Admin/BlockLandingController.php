@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Models\Block;
+use App\Models\Webconfig;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,7 +14,8 @@ class BlockLandingController extends Controller
     public function index($id)
     {
         $block = Block::with('landingPage')->findOrFail($id);
-        return view('admin.block.index', compact('block'));
+        $webConfig = Webconfig::find(1);
+        return view('admin.block.index', compact('block','webConfig'));
     }
     public function update(Request $request, $id)
     {

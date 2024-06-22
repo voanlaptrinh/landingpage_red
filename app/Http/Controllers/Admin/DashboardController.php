@@ -4,13 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Langdingpage;
+use App\Models\Webconfig;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     public function index(){
         $landingpages = Langdingpage::all();
-        return view('admin.content.index', compact('landingpages'));
+        $webConfig = Webconfig::find(1);
+        return view('admin.content.index', compact('landingpages','webConfig'));
     }
     public function toggleStatus(Request $request)
     {

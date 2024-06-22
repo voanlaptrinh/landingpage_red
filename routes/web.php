@@ -33,7 +33,9 @@ Route::prefix('/news')->group(function () {
 Route::prefix('/contact')->group(function () {
     Route::get('/', [UserContactController::class, 'index'])->name('contact.index');
     Route::post('/post-contact', [UserContactController::class, 'store'])->name('contact.store');
+    Route::post('/post-email', [UserContactController::class, 'Emailstore'])->name('email.store');
 });
+
 Route::prefix('/admin')->group(function () {
 
     Route::get('/', [DashboardController::class, 'index'])->name('landingpage.admin');
@@ -42,7 +44,10 @@ Route::prefix('/admin')->group(function () {
     Route::post('/landingpages/updateImage', [DashboardController::class, 'updateImage'])->name('landingpages.updateImage');
     Route::get('/{id}/blockLandingPage', [BlockLandingController::class, 'index'])->name('block.admin');
     Route::put('/blocks/{id}/updateBlock', [BlockLandingController::class, 'update'])->name('blocks.update');
-    
+
+    Route::prefix('/mailContact')->group(function () {
+        Route::get('/', [ContactController::class, 'EmailCotact'])->name('email.index');
+    });
     //subcription
     Route::prefix('/subcription')->group(function () {
         Route::get('/', [SubcriptionController::class, 'index'])->name('subcription.admin');
