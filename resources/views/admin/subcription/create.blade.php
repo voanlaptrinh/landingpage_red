@@ -14,7 +14,7 @@
                         <input type="text" class="form-control" id="title" name="title"
                             value="{{ old('title') }}">
                         @error('title')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror
@@ -24,7 +24,7 @@
                         <input type="number" min="0" class="form-control" id="price" name="price"
                             value="{{ old('price') }}">
                         @error('price')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror
@@ -35,7 +35,7 @@
                             value="{{ old('price') }}"> --}}
                             <textarea name="description" id="description"  class="form-control" cols="30" rows="10">{{ old('description') }}</textarea>
                         @error('description')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror
@@ -58,7 +58,7 @@
                             </label>
                         </div>
                         @error('images')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror
@@ -67,7 +67,7 @@
                         <label for="content" class="form-label">Mô tả</label>
                         <textarea class="tinymce-editor" name="content">{{ old('content') }}</textarea><!-- End TinyMCE Editor -->
                         @error('contentsubcription')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror

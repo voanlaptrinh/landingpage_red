@@ -23,10 +23,10 @@
                 <span>Tin tức</span>
             </a>
         </li><!-- End Dashboard Nav -->
-        <li class="nav-item {{ Request::route()->getName() == 'webconfig.admin' ? 'active-sidebar' : '' }}">
-            <a class="nav-link " href="{{ route('webconfig.admin') }}">
-                <i class="ri-settings-2-line"></i>
-                <span>Web setting</span>
+        <li class="nav-item {{ Request::route()->getName() == 'team.admin' || Request::route()->getName() == 'team.create' || Request::route()->getName() == 'team.edit' ? 'active-sidebar' : '' }}">
+            <a class="nav-link " href="{{ route('team.admin') }}">
+                <i class="ri-team-line"></i>
+                <span>Thành viên</span>
             </a>
         </li><!-- End Dashboard Nav -->
         <li class="nav-item {{ Request::route()->getName() == 'contact.admin' ? 'active-sidebar' : '' }}">
@@ -41,7 +41,12 @@
                 <span>Email Liên hệ</span>
             </a>
         </li><!-- End Dashboard Nav -->
-
+        <li class="nav-item {{ Request::route()->getName() == 'webconfig.admin' ? 'active-sidebar' : '' }}">
+            <a class="nav-link " href="{{ route('webconfig.admin') }}">
+                <i class="ri-settings-2-line"></i>
+                <span>Web setting</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
 
 
 

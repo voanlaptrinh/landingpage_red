@@ -117,7 +117,8 @@ class NewsController extends Controller
     public function detail($id)
     {
         $newsItem = News::findOrFail($id);
+        $webConfig = Webconfig::find(1);
         $newsItem->content = $this->correctImagePaths($newsItem->content);
-        return view('admin.news.detail', compact('newsItem'));
+        return view('admin.news.detail', compact('newsItem','webConfig'));
     }
 }

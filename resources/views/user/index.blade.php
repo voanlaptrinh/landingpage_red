@@ -435,6 +435,8 @@
         href='/users/wp-content/plugins/elementor/assets/css/frontend-lite.min8864.css?ver=3.17.3' media='all' />
     <link rel='stylesheet' id='elementor-frontend-css'
         href='/users/wp-content/uploads/sites/303/elementor/css/post-1262ea5a.css?ver=3.17.3' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css'
+        href='/users/wp-content/uploads/sites/303/elementor/css/post-122577a3.css?ver=3.17.3' media='all' />
     <link rel='stylesheet' id='swiper-css'
         href='/users/wp-content/plugins/elementor/assets/lib/swiper/css/swiper.min48f5.css?ver=5.3.6' media='all' />
     <link rel='stylesheet' id='elementor-post-3-css'
@@ -467,6 +469,7 @@
     <link rel='stylesheet' id='elementor-icons-fa-solid-css'
         href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3'
         media='all' />
+        <link rel="stylesheet" href="/users/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">
     <link rel='stylesheet' id='elementor-icons-fa-regular-css'
         href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min52d5.css?ver=5.15.3'
         media='all' />

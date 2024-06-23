@@ -1,4 +1,4 @@
-@extends('admin.index')
+team@extends('admin.index')
 @section('content')
     <section class="section">
 
@@ -15,7 +15,7 @@
                         <input type="text" class="form-control" id="title" name="title"
                             value="{{ $newsItem->title }}">
                         @error('title')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror
@@ -25,7 +25,7 @@
                         <input type="text" class="form-control" id="category" name="category"
                             value="{{ $newsItem->category }}">
                         @error('category')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror
@@ -35,7 +35,7 @@
                             <label for="description" class="form-label">Mô tả ngắn</label>
                             <textarea name="description" class="form-control" id="description" cols="30" rows="10">{{ $newsItem->description }}</textarea>
                             @error('description')
-                                <span class="invalid-feedback" role="alert">
+                                <span style= "color:red" role="alert">
                                     <label class="error" id="name_error" for="name">{{ $message }}</label>
                                 </span>
                             @enderror
@@ -69,7 +69,7 @@
                             </div>
 
                             @error('images')
-                                <span class="invalid-feedback" role="alert">
+                                <span style= "color:red" role="alert">
                                     <label class="error" id="name_error" for="name">{{ $message }}</label>
                                 </span>
                             @enderror
@@ -79,7 +79,7 @@
                         <label for="content" class="form-label">Mô tả</label>
                         <textarea class="tinymce-editor" name="content">{{ $newsItem->content }}</textarea><!-- End TinyMCE Editor -->
                         @error('content')
-                            <span class="invalid-feedback" role="alert">
+                            <span style= "color:red" role="alert">
                                 <label class="error" id="name_error" for="name">{{ $message }}</label>
                             </span>
                         @enderror

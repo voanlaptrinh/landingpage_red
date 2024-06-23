@@ -1,8 +1,8 @@
 @extends('admin.index')
 @section('content')
     <style>
-        .content-detail-news img {
-            width: 100%;
+        .content-detail-newssubcription img {
+            max-width: 100%;
         }
     </style>
     <section class="section">
@@ -13,7 +13,7 @@
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                         <img style="width: 100px; height: 100px;" src="{{ asset('images/' . $newsItem->images) }}"
                             style="" alt="Profile" class="rounded-circle">
-                        <h2>{{ $newsItem->title }}</h2>
+                        <h6 class="text-center">{{ $newsItem->title }}</h6>
                         <p>Danh mục: {{$newsItem->category}}</p>
                         <h6>{{ $newsItem->created_at }}</h6>
                     </div>

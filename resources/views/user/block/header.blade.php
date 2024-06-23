@@ -51,7 +51,7 @@
                                                     </li>
                                                     <li id="menu-item-1408"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1408">
-                                                        <a href="team/index.html">Team</a>
+                                                        <a href="{{route('teams.index')}}">Team</a>
                                                     </li>
                                                     <li id="menu-item-1407"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1407">

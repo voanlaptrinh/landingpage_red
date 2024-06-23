@@ -3,13 +3,16 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlockLandingController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\SubcriptionController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\WebConfigController;
 use App\Http\Controllers\LandingpageController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\UserNewsController;
+use App\Http\Controllers\UserTeamController;
 use App\Models\Subcription;
 use Illuminate\Support\Facades\Route;
 
@@ -35,7 +38,9 @@ Route::prefix('/contact')->group(function () {
     Route::post('/post-contact', [UserContactController::class, 'store'])->name('contact.store');
     Route::post('/post-email', [UserContactController::class, 'Emailstore'])->name('email.store');
 });
-
+Route::prefix('/teams')->group(function () {
+    Route::get('/', [UserTeamController::class, 'index'])->name('teams.index');
+});
 Route::prefix('/admin')->group(function () {
 
     Route::get('/', [DashboardController::class, 'index'])->name('landingpage.admin');
@@ -47,6 +52,18 @@ Route::prefix('/admin')->group(function () {
 
     Route::prefix('/mailContact')->group(function () {
         Route::get('/', [ContactController::class, 'EmailCotact'])->name('email.index');
+    });
+
+
+    Route::prefix('/faqs')->group(function () {
+        // Route::resource('/', FaqController::class);
+        Route::get('/', [FaqController::class, 'index'])->name('faqs.admin');
+        Route::get('/create', [FaqController::class, 'create'])->name('faqs.create');
+        Route::post('/faqs', [FaqController::class, 'store'])->name('faqs.store');
+        Route::get('/{id}/edit', [FaqController::class, 'edit'])->name('faqs.edit');
+        Route::put('/{id}/update', [FaqController::class, 'update'])->name('faqs.update');
+        Route::delete('/faqs/{id}', [FaqController::class, 'destroy'])->name('faqs.destroy');
+        Route::post('/reorder', [FaqController::class, 'reorder'])->name('faqs.reorder');
     });
     //subcription
     Route::prefix('/subcription')->group(function () {
@@ -76,6 +93,15 @@ Route::prefix('/admin')->group(function () {
 
     Route::prefix('/contact')->group(function () {
         Route::get('/', [ContactController::class, 'index'])->name('contact.admin');
+    });
+
+    Route::prefix('/team')->group(function () {
+        Route::get('/', [TeamController::class, 'index'])->name('team.admin');
+        Route::get('/create', [TeamController::class, 'create'])->name('team.create');
+        Route::post('/team', [TeamController::class, 'store'])->name('team.store');
+        Route::get('/{id}/edit', [TeamController::class, 'edit'])->name('team.edit');
+        Route::put('/{id}/update', [TeamController::class, 'update'])->name('team.update');
+        Route::delete('/team/{id}', [TeamController::class, 'destroy'])->name('teams.destroy');
     });
 
 

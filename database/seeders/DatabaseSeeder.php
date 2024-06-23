@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(NewsSeeder::class);
+        $this->call(TeamSeeder::class);
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
@@ -117,7 +118,7 @@ class DatabaseSeeder extends Seeder
       
         DB::table('webConfigs')->insert(
             [
-                'title' => 'Landingpages',
+                'title' => 'MetaSoft',
                 'email' => 'info@example.com',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                                                 tellus, luctus nec ullamcorper mattis pulvinar.',
