@@ -29,6 +29,12 @@
                 <span>Thành viên</span>
             </a>
         </li><!-- End Dashboard Nav -->
+        <li class="nav-item {{ Request::route()->getName() == 'faqs.admin' || Request::route()->getName() == 'faqs.create' || Request::route()->getName() == 'faqs.edit' ? 'active-sidebar' : '' }}">
+            <a class="nav-link " href="{{ route('faqs.admin') }}">
+                <i class="ri-user-4-line"></i>
+                <span>FAQ</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
         <li class="nav-item {{ Request::route()->getName() == 'contact.admin' ? 'active-sidebar' : '' }}">
             <a class="nav-link " href="{{ route('contact.admin') }}">
                 <i class="bx bx-mail-send"></i>

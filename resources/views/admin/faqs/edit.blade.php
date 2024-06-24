@@ -3,12 +3,12 @@
 @section('content')
 
 <div class="container">
-    <h1>Edit FAQ</h1>
+    <h1>Sửa FAQ</h1>
     <form action="{{ route('faqs.update', $faq->id) }}" method="POST" id="edit-faq-form">
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="question">Question</label>
+            <label for="question">Câu hỏi</label>
             <input type="text" name="question" id="question" class="form-control" value="{{ old('question', $faq->question) }}" required>
         </div>
         
@@ -18,16 +18,18 @@
                 <div class="input-group mb-2">
                     <input type="text" name="answers[]" class="form-control" value="{{ $answer->answer }}" required>
                     <div class="input-group-append">
-                        <button type="button" class="btn btn-outline-danger remove-answer">Remove</button>
+                        <button type="button" class="btn btn-outline-danger remove-answer ms-3">Xóa</button>
                     </div>
                 </div>
             @endforeach
         </div>
         
-        <button type="button" id="add-answer" class="btn btn-sm btn-secondary">Add Answer</button>
+       <div class="text-center"> <button type="button" id="add-answer" class="btn btn-sm btn-secondary">Thêm câu trả lời</button></div>
         
-        <button type="submit" class="btn btn-success mt-3">Update FAQ</button>
-        <a href="{{ route('faqs.admin') }}" class="btn btn-secondary mt-3">Cancel</a>
+        <div class="text-end">
+            <button type="submit" class="btn btn-success mt-3">Sửa</button>
+        <a href="{{ route('faqs.admin') }}" class="btn btn-secondary mt-3">Thoát</a>
+        </div>
     </form>
 </div>
 

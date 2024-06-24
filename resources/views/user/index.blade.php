@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link rel="pingback" href="xmlrpc.html" />
-    <title>{{$webConfig->title}}</title>
+    <title>{{ $webConfig->title }}</title>
     <link href="{{ isset($webConfig->logo) ? asset('images/' . $webConfig->logo) : asset('logo.png') }}" rel="icon">
     <meta name='robots' content='max-image-preview:large' />
     <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Feed" href="feed/index.html" />
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-30c16.css?ver=1.0.1">
     <link rel='stylesheet' id='jkit-elements-main-css'
         href='/users/wp-content/plugins/jeg-elementor-kit/assets/css/elements/main61da.css' media='all' />
-       <link href="{{ asset('/css/toastr.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/toastr.min.css') }}" rel="stylesheet">
     <style id='wp-emoji-styles-inline-css'>
         img.wp-smiley,
         img.emoji {
@@ -469,7 +469,7 @@
     <link rel='stylesheet' id='elementor-icons-fa-solid-css'
         href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3'
         media='all' />
-        <link rel="stylesheet" href="/users/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">
+    <link rel="stylesheet" href="/users/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css">
     <link rel='stylesheet' id='elementor-icons-fa-regular-css'
         href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min52d5.css?ver=5.15.3'
         media='all' />
@@ -488,17 +488,15 @@
 
 <body
     class="home page-template page-template-elementor_header_footer page page-id-125 jkit-color-scheme elementor-default elementor-template-full-width elementor-kit-3 texxx elementor-page elementor-page-125">
-    @include('user.block.header')
     <div id="page" class="jkit-template  site">
+        @include('user.block.header')
         <div data-elementor-type="wp-page" data-elementor-id="125" class="elementor elementor-125">
 
             @yield('content')
         </div>
+        @include('user.block.footer')
     </div>
-    <style>
-
-    </style>
-    @include('user.block.footer')
+    
 
 
 
@@ -528,23 +526,23 @@
         id="elementor-waypoints-js"></script>
     <script src="/users/wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2" id="jquery-ui-core-js"></script>
     <script src="{{ asset('/js/toastr.min.js') }}"></script>
-<script>
-    @if (Session::has('success'))
-        toastr.success("{{ Session::get('success') }}");
-    @endif
+    <script>
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}");
+        @endif
 
-    @if (Session::has('error'))
-        toastr.error("{{ Session::get('error') }}");
-    @endif
+        @if (Session::has('error'))
+            toastr.error("{{ Session::get('error') }}");
+        @endif
 
-    @if (Session::has('info'))
-        toastr.info("{{ Session::get('info') }}");
-    @endif
+        @if (Session::has('info'))
+            toastr.info("{{ Session::get('info') }}");
+        @endif
 
-    @if (Session::has('warning'))
-        toastr.warning("{{ Session::get('warning') }}");
-    @endif
-</script>
+        @if (Session::has('warning'))
+            toastr.warning("{{ Session::get('warning') }}");
+        @endif
+    </script>
     <script id="elementor-frontend-js-before">
         var elementorFrontendConfig = {
             "environmentMode": {
@@ -667,8 +665,8 @@
             }
         };
     </script>
-    <script src="/users/wp-content/plugins/elementor/assets/js/frontend.min8864.js?ver=3.17.3" id="elementor-frontend-js">
-    </script>
+    {{-- <script src="/users/wp-content/plugins/elementor/assets/js/frontend.min8864.js?ver=3.17.3" id="elementor-frontend-js">
+    </script> --}}
 
     <script src="/users/wp-content/plugins/jeg-elementor-kit/assets/js/elements/sticky-element61da.js?ver=2.6.2"
         id="jkit-sticky-element-js"></script>

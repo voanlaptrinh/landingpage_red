@@ -3,16 +3,16 @@
 @section('content')
 
 <div class="container">
-    <h1>{{ isset($faq) ? 'Edit FAQ' : 'Add New FAQ' }}</h1>
+    <h1>Thêm mới FAQ</h1>
     <form action="{{  route('faqs.store') }}" method="POST">
         @csrf
      
         <div class="form-group">
-            <label for="question">Question</label>
+            <label for="question">Câu hỏi</label>
             <input type="text" name="question" id="question" class="form-control" value="{{ old('question', $faq->question ?? '') }}" required>
         </div>
         <div class="form-group">
-            <label for="answers">Answers</label>
+            <label for="answers">Câu trả lời</label>
             <div id="answers-container">
                 @if(isset($faq))
                     @foreach($faq->answers as $answer)
@@ -22,9 +22,13 @@
                     <input type="text" name="answers[]" class="form-control mb-2" required>
                 @endif
             </div>
-            <button type="button" id="add-answer" class="btn btn-sm btn-secondary">Add Answer</button>
+            <div class="text-center">
+                <button type="button" id="add-answer" class="btn btn-sm btn-secondary">Thêm câu trả lời</button>
+            </div>
         </div>
-        <button type="submit" class="btn btn-success">ADd</button>
+       <div class="text-end">
+        <button type="submit" class="btn btn-success ">Thêm mới</button>
+       </div>
     </form>
 </div>
 
