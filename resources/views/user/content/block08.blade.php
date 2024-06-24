@@ -44,7 +44,7 @@
                                         @foreach ($news->take(3) as $new)
                                             <article
                                                 class="jkit-post post-743 post type-post status-publish format-standard has-post-thumbnail hentry category-project tag-project">
-                                                <div class="jkit-thumb"><a href="">
+                                                <div class="jkit-thumb"><a href="{{ route('newsUser.detail', $new->id) }}">
                                                         <div class="thumbnail-container ">
                                                             <img loading="lazy" decoding="async" width="1440"
                                                                 height="960"
@@ -59,7 +59,7 @@
                                                 </div>
                                                 <div class="jkit-postblock-content">
                                                     <h4 class="jkit-post-title">
-                                                        <a href="">{{$new->title}}</a>
+                                                        <a href="{{ route('newsUser.detail', $new->id) }}">{{$new->title}}</a>
                                                     </h4>
                                                     <div class="jkit-post-excerpt">
                                                         <p>{{$new->description}}</p>

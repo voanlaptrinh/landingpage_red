@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Answer;
+use App\Models\News;
 use App\Models\Question;
 use App\Models\Webconfig;
 use Illuminate\Http\Request;
@@ -14,6 +15,7 @@ class FaqController extends Controller
     {
         $webConfig = Webconfig::find(1); // Retrieve the web configuration, adjust as necessary
         $questions = Question::with('answers')->orderBy('order')->get(); // Retrieve questions with answers
+     
         return view('admin.faqs.index', compact('questions', 'webConfig'));
     }
 

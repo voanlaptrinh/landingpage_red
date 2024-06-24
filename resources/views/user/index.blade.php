@@ -10,11 +10,12 @@
     <link href="{{ isset($webConfig->logo) ? asset('images/' . $webConfig->logo) : asset('logo.png') }}" rel="icon">
     <meta name='robots' content='max-image-preview:large' />
     <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Feed" href="feed/index.html" />
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+  
     <link rel="alternate" type="application/rss+xml" title="Madesign &raquo; Comments Feed"
         href="comments/feed/index.html" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-7442fbe.css?ver=1.0.1">
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-127013da.css?ver=1.0.1">
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-30c16.css?ver=1.0.1">
@@ -457,9 +458,9 @@
         href='/users/wp-content/themes/hello-elementor/style.minc141.css?ver=2.6.1' media='all' />
     <link rel='stylesheet' id='hello-elementor-theme-style-css'
         href='/users/wp-content/themes/hello-elementor/theme.minc141.css?ver=2.6.1' media='all' />
-    {{-- <link rel='stylesheet' id='google-fonts-1-css'
+    <link rel='stylesheet' id='google-fonts-1-css'
         href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.4.1'
-        media='all' /> --}}
+        media='all' />
     <link rel='stylesheet' id='elementor-icons-jkiticon-css'
         href='/users/wp-content/plugins/jeg-elementor-kit/assets/fonts/jkiticon/jkiticon61da.css?ver=2.6.2'
         media='all' />
@@ -473,17 +474,19 @@
     <link rel='stylesheet' id='elementor-icons-fa-regular-css'
         href='/users/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min52d5.css?ver=5.15.3'
         media='all' />
+<link rel='stylesheet' id='elementor-post-1252-css' href='/users/wp-content/uploads/sites/303/elementor/css/post-1252a55d.css?ver=1673990567' media='all' />
+
     {{-- <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin> --}}
     <script src="/users/wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
     <script src="/users/wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
-    {{-- <script src="/users/wp-content/plugins/allow-webp-image/public/js/allow-webp-image-publicf269.js?ver=1.0.1"
-        id="allow-webp-image-js"></script> --}}
-    {{-- <script
+    <script src="/users/wp-content/plugins/allow-webp-image/public/js/allow-webp-image-publicf269.js?ver=1.0.1"
+        id="allow-webp-image-js"></script>
+    <script
         src="/users/wp-content/plugins/template-kit-export/public/assets/js/template-kit-export-public.min365c.js?ver=1.0.21"
-        id="template-kit-export-js"></script> --}}
+        id="template-kit-export-js"></script>
     <script src="/users/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min8864.js?ver=3.17.3"
         id="font-awesome-4-shim-js"></script>
-
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 </head>
 
 <body
