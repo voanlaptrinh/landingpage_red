@@ -12,6 +12,7 @@ use App\Http\Controllers\LandingpageController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\UserFaqController;
+use App\Http\Controllers\UserFeedbackController;
 use App\Http\Controllers\UserNewsController;
 use App\Http\Controllers\UserTeamController;
 use App\Models\Subcription;
@@ -44,6 +45,9 @@ Route::prefix('/teams')->group(function () {
 });
 Route::prefix('/faqs')->group(function () {
     Route::get('/', [UserFaqController::class, 'index'])->name('faqs.index');
+});
+Route::prefix('/feedback')->group(function () {
+    Route::get('/', [UserFeedbackController::class, 'index'])->name('feedback.index');
 });
 Route::prefix('/admin')->group(function () {
 

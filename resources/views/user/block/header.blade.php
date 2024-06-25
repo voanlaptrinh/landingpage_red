@@ -60,7 +60,7 @@
 
                                                         <li id="menu-item-1415"
                                                             class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1415">
-                                                            <a href="">Feedback</a>
+                                                            <a href="{{route('feedback.index')}}">Feedback</a>
                                                         </li>
                                                     </ul>
                                                 </li>
