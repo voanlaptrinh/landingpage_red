@@ -11,9 +11,9 @@
                         <div class="elementor-element elementor-element-ad2e3c3 elementor-widget elementor-widget-image"
                             data-id="ad2e3c3" data-element_type="widget" data-widget_type="image.default">
                             <div class="elementor-widget-container">
-
-                                <img src="{{ isset($webConfig->logo) ? asset('image/' . $webConfig->logo) : asset('logo.png') }}"
-                                    class="attachment-full size-full wp-image-781" alt decoding="async" />
+                                <a href="/">
+                                    <img src="{{ isset($webConfig->logo) ? asset('image/' . $webConfig->logo) : asset('logo.png') }}"
+                                        class="attachment-full size-full wp-image-781" alt decoding="async" /></a>
                             </div>
                         </div>
                     </div>
@@ -34,38 +34,56 @@
                                                 class="jkit-menu jkit-menu-direction-flex jkit-submenu-position-top">
                                                 <li id="menu-item-1413"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1413">
-                                                    <a href="{{route('landingpage')}}">Home</a></li>
-                                               
+                                                    <a href="{{ route('landingpage') }}">Home</a>
+                                                </li>
+
                                                 <li id="menu-item-15"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-15">
-                                                    <a href="#">About</a>
-                                                 
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1411">
+                                                    <a onclick="toggleSubMenu(this)">About
+                                                        <i aria-hidden="true" class="jki jki-angle-down-solid"></i>
+                                                    </a>
+
                                                     <ul class="sub-menu">
                                                         <li id="menu-item-1409"
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1409">
-                                                            <a href="../pricing/index.html">Pricing</a></li>
+                                                            <a href="">Infomation</a>
+                                                        </li>
                                                         <li id="menu-item-1408"
                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1408">
-                                                            <a href="{{route('teams.index')}}">Team</a></li>
+                                                            <a href="{{ route('teams.index') }}">Team</a>
+                                                        </li>
                                                         <li id="menu-item-1407"
                                                             class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1252 current_page_item menu-item-1407">
-                                                            <a href="{{route('faqs.index')}}" aria-current="page">FAQ</a></li>
-                                                        <li id="menu-item-1406"
-                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1406">
-                                                            <a href="../blog/index.html">Blog</a></li>
+                                                            <a href="{{ route('faqs.index') }}"
+                                                                aria-current="page">FAQ</a>
+                                                        </li>
+
                                                         <li id="menu-item-1415"
                                                             class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1415">
-                                                            <a
-                                                                href="../2022/07/15/hundreds-of-bike-sketches-from-memories-realized-in-3d-images/index.html">Single
-                                                                Post</a></li>
+                                                            <a href="">Feedback</a>
+                                                        </li>
                                                     </ul>
                                                 </li>
                                                 <li id="menu-item-1405"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1405">
-                                                    <a href="{{route('newsUser.index')}}">News</a></li>
+                                                    <a href="">Service</a>
+                                                </li>
                                                 <li id="menu-item-1405"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1405">
-                                                    <a href="{{route('contact.index')}}">Contact</a></li>
+                                                    <a href="">Project</a>
+                                                </li>
+                                                <li id="menu-item-1405"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1405">
+                                                    <a href="">Pricing</a>
+                                                </li>
+                                                <li id="menu-item-1405"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1405">
+                                                    <a href="{{ route('newsUser.index') }}">News</a>
+                                                </li>
+                                                <li id="menu-item-1405"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1405">
+                                                    <a href="{{ route('contact.index') }}">Contact</a>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="jkit-nav-identity-panel">
@@ -110,32 +128,42 @@
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var hamburgerMenuButton = document.querySelector('.jkit-hamburger-menu');
-    var closeMenuButton = document.querySelector('.jkit-close-menu');
-    var menuWrapper = document.querySelector('.jkit-menu-wrapper');
+      function toggleSubMenu(anchor) {
+        // Tìm phần tử <ul class="sub-menu"> liền kề của thẻ <a> được click
+        var submenu = anchor.nextElementSibling;
 
-    // Toggle the active class to show the menu
-    hamburgerMenuButton.addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent the click from propagating to the document
-        menuWrapper.classList.toggle('active');
-    });
-
-    // Remove the active class to hide the menu
-    closeMenuButton.addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent the click from propagating to the document
-        menuWrapper.classList.remove('active');
-    });
-
-    // Close the menu if clicking outside of it
-    document.addEventListener('click', function(event) {
-        var isClickInsideMenu = menuWrapper.contains(event.target);
-        var isClickOnHamburger = hamburgerMenuButton.contains(event.target);
-
-        if (!isClickInsideMenu && !isClickOnHamburger) {
-            menuWrapper.classList.remove('active');
+        // Đảo trạng thái class dropdown-open
+        if (submenu.classList.contains('dropdown-open')) {
+            submenu.classList.remove('dropdown-open');
+        } else {
+            submenu.classList.add('dropdown-open');
         }
-    });
-});
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        var hamburgerMenuButton = document.querySelector('.jkit-hamburger-menu');
+        var closeMenuButton = document.querySelector('.jkit-close-menu');
+        var menuWrapper = document.querySelector('.jkit-menu-wrapper');
 
+        // Toggle the active class to show the menu
+        hamburgerMenuButton.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click from propagating to the document
+            menuWrapper.classList.toggle('active');
+        });
+
+        // Remove the active class to hide the menu
+        closeMenuButton.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click from propagating to the document
+            menuWrapper.classList.remove('active');
+        });
+
+        // Close the menu if clicking outside of it
+        document.addEventListener('click', function(event) {
+            var isClickInsideMenu = menuWrapper.contains(event.target);
+            var isClickOnHamburger = hamburgerMenuButton.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnHamburger) {
+                menuWrapper.classList.remove('active');
+            }
+        });
+    });
 </script>

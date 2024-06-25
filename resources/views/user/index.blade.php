@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-7442fbe.css?ver=1.0.1">
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-127013da.css?ver=1.0.1">
     <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-30c16.css?ver=1.0.1">
+    
     <link rel='stylesheet' id='jkit-elements-main-css'
         href='/users/wp-content/plugins/jeg-elementor-kit/assets/css/elements/main61da.css' media='all' />
     <link href="{{ asset('/css/toastr.min.css') }}" rel="stylesheet">
@@ -486,7 +487,9 @@
         id="template-kit-export-js"></script>
     <script src="/users/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min8864.js?ver=3.17.3"
         id="font-awesome-4-shim-js"></script>
+        <link rel="stylesheet" href="/users/wp-content/uploads/sites/303/elementor/css/post-93266a5.css">
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+
 </head>
 
 <body
@@ -668,13 +671,13 @@
             }
         };
     </script>
-    {{-- <script src="/users/wp-content/plugins/elementor/assets/js/frontend.min8864.js?ver=3.17.3" id="elementor-frontend-js">
-    </script> --}}
+    <script src="/users/wp-content/plugins/elementor/assets/js/frontend.min8864.js?ver=3.17.3" id="elementor-frontend-js">
+    </script>
 
     <script src="/users/wp-content/plugins/jeg-elementor-kit/assets/js/elements/sticky-element61da.js?ver=2.6.2"
         id="jkit-sticky-element-js"></script>
-    <script src="/users/wp-content/plugins/jeg-elementor-kit/assets/js/elements/nav-menu61da.js?ver=2.6.2"
-        id="jkit-element-navmenu-js"></script>
+    {{-- <script src="/users/wp-content/plugins/jeg-elementor-kit/assets/js/elements/nav-menu61da.js?ver=2.6.2"
+        id="jkit-element-navmenu-js"></script> --}}
     <script src="/users/wp-content/plugins/jeg-elementor-kit/assets/js/elements/search61da.js?ver=2.6.2"
         id="jkit-element-search-js"></script>
     <script src="/users/wp-content/plugins/jeg-elementor-kit/assets/js/sweetalert2/sweetalert2.min430c.js?ver=11.6.16"

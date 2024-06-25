@@ -270,18 +270,10 @@
                         <div class="elementor-element elementor-element-06e037e elementor-widget elementor-widget-heading"
                             data-id="06e037e" data-element_type="widget" data-widget_type="heading.default">
                             <div class="elementor-widget-container">
-                                <h2 class="elementor-heading-title elementor-size-default">Lates Blog
-                                    & Articles</h2>
+                                <h2 class="elementor-heading-title elementor-size-default pb-5">Blog và Bài viết</h2>
                             </div>
                         </div>
-                        <div class="elementor-element elementor-element-60ca95f elementor-widget elementor-widget-text-editor"
-                            data-id="60ca95f" data-element_type="widget" data-widget_type="text-editor.default">
-                            <div class="elementor-widget-container">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua
-                                    veniam.</p>
-                            </div>
-                        </div>
+                       
                         <div class="elementor-element elementor-element-81251dc elementor-widget elementor-widget-jkit_post_block"
                             data-id="81251dc" data-element_type="widget" data-widget_type="jkit_post_block.default">
                             <div class="elementor-widget-container">
