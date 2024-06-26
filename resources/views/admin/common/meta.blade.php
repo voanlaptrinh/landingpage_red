@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <!-- Favicons -->
-<link href="{{ isset($webConfig->metaicon) ? asset('images/' . $webConfig->metaicon) : asset('logo.png') }}" rel="icon">
+<link href="{{ isset($webConfig->metaicon) ? asset('landing/' . $webConfig->metaicon) : asset('logo.png') }}" rel="icon">
 {{-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
 <!-- Google Fonts -->
