@@ -12,7 +12,7 @@
                             data-id="ad2e3c3" data-element_type="widget" data-widget_type="image.default">
                             <div class="elementor-widget-container">
                                 <a href="/">
-                                    <img src="{{ isset($webConfig->logo) ? asset('image/' . $webConfig->logo) : asset('logo.png') }}"
+                                    <img src="{{ isset($webConfig->logo) ? asset('images/' . $webConfig->logo) : asset('logo.png') }}"
                                         class="attachment-full size-full wp-image-781" alt decoding="async" /></a>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                                             <div class="jkit-nav-site-title">
                                                 <a href="/" class="jkit-nav-logo">
                                                     <img
-                                                        src="{{ isset($webConfig->logo) ? asset('image/' . $webConfig->logo) : asset('logo.png') }}"></a>
+                                                        src="{{ isset($webConfig->logo) ? asset('images/' . $webConfig->logo) : asset('logo.png') }}"></a>
                                             </div>
                                             <button class="jkit-close-menu"><i aria-hidden="true"
                                                     class="jki jki-times-solid"></i></button>

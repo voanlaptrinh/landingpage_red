@@ -59,6 +59,22 @@ class WebConfigController extends Controller
             // Save the image name to the webConfig
             $webConfig->logoFooter = $imageName;
         }
+        if ($request->hasFile('metaicon')) {
+      
+            // Validate the file (optional, but recommended)
+            $request->validate([
+                'metaicon' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+
+            // Generate a unique name for the image
+            $imageName = time() . '.' . $request->metaicon->extension();
+
+            // Move the image to the public/images directory
+            $request->metaicon->move(public_path('landing'), $imageName);
+
+            // Save the image name to the webConfig
+            $webConfig->metaicon = $imageName;
+        }
         $webConfig->save();
 
         return redirect()->route('webconfig.admin')->with('success', 'Thông tin website đã được cập nhật thành công.');

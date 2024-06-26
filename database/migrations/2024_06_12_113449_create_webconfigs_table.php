@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->string('logo')->nullable();
+            $table->string('metaicon')->nullable();
             $table->string('logoFooter')->nullable();
             $table->string('description')->nullable();
             $table->string('email')->nullable();

@@ -12,46 +12,88 @@
                     <label class="custum-file-upload" for="file">
                         <div class="icon">
                             @if (!empty($webConfig->logo))
-                                <img width="150px" src="{{ asset('images/' . $webConfig->logo) }}" alt="">
+                                <img width="150px" src="" alt="" id="demo-image-preview"
+                                    style=" display: none;">
+                                <img width="150px" id="upload-icon" src="{{ asset('images/' . $webConfig->logo) }}"
+                                    alt="">
                             @else
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
-                                <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-                                <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path fill=""
-                                        d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
-                                        clip-rule="evenodd" fill-rule="evenodd"></path>
-                                </g>
-                            </svg>
+                                <div id="upload-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
+                                        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                                        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill=""
+                                                d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
+                                                clip-rule="evenodd" fill-rule="evenodd"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+
+                                <img width="150px" src="" alt="" id="demo-image-preview"
+                                    style=" display: none;">
                             @endif
-                          
+
                         </div>
                         <div class="text">
-                            <span>Đưa ảnh LOGO vào</span>
+                            <span>Đưa ảnh LOGO vào (200x36.6)</span>
                         </div>
-                        <input type="file" id="file" name="logo" >
+                        <input type="file" id="file" name="logo" onchange="displaySelectedImage(event)" />
                     </label>
                     <label class="custum-file-upload mt-3" for="logoFooter">
                         <div class="icon">
                             @if (!empty($webConfig->logoFooter))
-                                <img width="150px" src="{{ asset('image/' . $webConfig->logoFooter) }}" alt="">
+                            <img width="150px" src="" alt="" id="demo-image-preview1"
+                                    style=" display: none;">
+                                <img width="150px" id="upload-icon1" src="{{ asset('image/' . $webConfig->logoFooter) }}" alt="">
                             @else
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
-                                <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-                                <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path fill=""
-                                        d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
-                                        clip-rule="evenodd" fill-rule="evenodd"></path>
-                                </g>
-                            </svg>
+                                <div id="upload-icon1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
+                                        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                                        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill=""
+                                                d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
+                                                clip-rule="evenodd" fill-rule="evenodd"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <img width="150px" src="" alt="" id="demo-image-preview1"
+                                style=" display: none;">
                             @endif
-                          
+
                         </div>
                         <div class="text">
                             <span>Đưa ảnh footer vào</span>
                         </div>
-                        <input type="file" id="logoFooter" name="logoFooter" >
+                        <input type="file" id="logoFooter" name="logoFooter" onchange="displaySelectedImage1(event)">
+                    </label>
+                    <label class="custum-file-upload mt-3" for="metaicon">
+                        <div class="icon">
+                            @if (!empty($webConfig->metaicon))
+                            <img width="150px" src="" alt="" id="demo-image-preview2"
+                                    style=" display: none;">
+                                <img width="150px" id="upload-icon2" src="{{ asset('landing/' . $webConfig->metaicon) }}" alt="">
+                            @else
+                                <div id="upload-icon2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
+                                        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                                        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path fill=""
+                                                d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
+                                                clip-rule="evenodd" fill-rule="evenodd"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <img width="150px" src="" alt="" id="demo-image-preview2"
+                                style=" display: none;">
+                            @endif
+
+                        </div>
+                        <div class="text">
+                            <span>Đưa ảnh Meta Icon vào</span>
+                        </div>
+                        <input type="file" id="metaicon" name="metaicon" onchange="displaySelectedImage2(event)">
                     </label>
                 </div>
                 <div class="col-lg-8 row">
@@ -108,4 +150,71 @@
 
         </div>
     </div>
+
+    <script>
+        function displaySelectedImage(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var uploadIcon = document.getElementById('upload-icon');
+                var demoImagePreview = document.getElementById('demo-image-preview');
+                var demoImageContainer = document.getElementById('demo-image-container');
+
+                // Hide the upload icon
+                uploadIcon.style.display = 'none';
+
+                // Show the demo image preview
+                demoImagePreview.src = e.target.result;
+                demoImagePreview.style.display = 'inline-block';
+
+                // Show the demo image container
+                demoImageContainer.style.display = 'block';
+            }
+
+            reader.readAsDataURL(file);
+        }
+
+        function displaySelectedImage1(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var uploadIcon = document.getElementById('upload-icon1');
+                var demoImagePreview = document.getElementById('demo-image-preview1');
+
+                // Hide the upload icon
+                uploadIcon.style.display = 'none';
+
+                // Show the demo image preview
+                demoImagePreview.src = e.target.result;
+                demoImagePreview.style.display = 'inline-block';
+
+
+            }
+
+            reader.readAsDataURL(file);
+        }
+
+        function displaySelectedImage2(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var uploadIcon = document.getElementById('upload-icon2');
+                var demoImagePreview = document.getElementById('demo-image-preview2');
+
+                // Hide the upload icon
+                uploadIcon.style.display = 'none';
+
+                // Show the demo image preview
+                demoImagePreview.src = e.target.result;
+                demoImagePreview.style.display = 'inline-block';
+
+
+            }
+
+            reader.readAsDataURL(file);
+        }
+    </script>
 @endsection
