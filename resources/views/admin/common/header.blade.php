@@ -4,7 +4,7 @@
         <a href="{{ route('landingpage.admin') }}" class="logo d-flex align-items-center">
             <img src="{{ isset($webConfig->logo) ? asset('images/' . $webConfig->logo) : asset('logo.png') }}"
                 alt="Logo">
-            <span class="d-none d-lg-block">{{ $webConfig->title }}</span>
+            {{-- <span class="d-none d-lg-block">{{ $webConfig->title }}</span> --}}
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
