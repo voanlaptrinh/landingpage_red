@@ -123,23 +123,23 @@
                     </div>
                     <div class="col-md-6">
                         <label for="facebook" class="form-label">Facebook</label>
-                        <input type="text" class="form-control" id="facebook" value="{{ $webConfig->facebook }}">
+                        <input type="text" class="form-control" name="facebook" id="facebook" value="{{ $webConfig->facebook }}">
                     </div>
                     <div class="col-md-6">
                         <label for="youtube" class="form-label">Youtube</label>
-                        <input type="text" class="form-control" id="youtube" value="{{ $webConfig->youtube }}">
+                        <input type="text" class="form-control" name="youtube" id="youtube" value="{{ $webConfig->youtube }}">
                     </div>
                     <div class="col-md-4">
                         <label for="twitter" class="form-label">Twitter</label>
-                        <input type="text" class="form-control" id="twitter" value="{{ $webConfig->twitter }}">
+                        <input type="text" class="form-control" name="twitter" id="twitter" value="{{ $webConfig->twitter }}">
                     </div>
                     <div class="col-md-4">
                         <label for="telegram" class="form-label">Telegram</label>
-                        <input type="text" class="form-control" id="telegram" value="{{ $webConfig->telegram }}">
+                        <input type="text" class="form-control" name="telegram" id="telegram" value="{{ $webConfig->telegram }}">
                     </div>
                     <div class="col-md-4">
                         <label for="instagram" class="form-label">Instagram</label>
-                        <input type="text" class="form-control" id="instagram" value="{{ $webConfig->instagram }}">
+                        <input type="text" class="form-control" name="instagram" id="instagram" value="{{ $webConfig->instagram }}">
                     </div>
                     <div class="text-end pt-4">
                         <button type="submit" class="btn btn-primary">Submit</button>
