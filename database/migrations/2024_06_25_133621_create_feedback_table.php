@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
             $table->string('email')->nullable();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->string('rating')->nullable();
             $table->string('content')->nullable();
             $table->timestamps();

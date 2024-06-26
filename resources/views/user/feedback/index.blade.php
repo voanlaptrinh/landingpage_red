@@ -107,14 +107,28 @@
                         <div class="elementor-element elementor-element-9fa3d73 elementor-widget elementor-widget-jkit_accordion"
                             data-id="9fa3d73" data-element_type="widget" data-widget_type="jkit_accordion.default">
                             <div class="elementor-widget-container">
-                                <form action="">
-
+                                <form action="{{ route('feedback.store') }}" method="POST">
+                                    @csrf
+                                    <input class="mb-3" type="email" name="email" id="email"
+                                        value="{{ old('email') }}" placeholder="Email">
+                                    @error('email')
+                                        <span class="" role="alert">
+                                            <label style="color: red" class="error" id="name_error"
+                                                for="name">{{ $message }}</label>
+                                        </span>
+                                    @enderror
+                                    <textarea name="content" id="textarea" cols="5" rows="5">{{ old('content') }}</textarea>
+                                    @error('content')
+                                        <span class="" role="alert">
+                                            <label style="color: red" class="error" id="name_error"
+                                                for="name">{{ $message }}</label>
+                                        </span>
+                                    @enderror
                                     <div class="text-end">
-                                    <span  class="char-counter " id="charCounter">0/255</span>
-                                </div>
-                                    <textarea name="" id="textarea" cols="10" rows="10"></textarea>
+                                        <span class="char-counter " id="charCounter">0/255</span>
+                                    </div>
                                     <div class="text-end mt-2">
-                                        <button>Submit</button>
+                                        <button type="submit">Submit</button>
                                     </div>
                                 </form>
 
@@ -124,14 +138,64 @@
                     </div>
                 </div>
                 <hr class="pt-2 pb-5">
-<div class="row">
-<div class="col-lg-2">
-    ádad
-</div>
-<div class="col-lg-10">
-    ádfasdf
-</div>
-</div>
+                <div class="container">
+                    <div class="row">
+                        @forelse ($feedbacks as $feedback)
+                            <div class="col-lg-12 pt-5 ">
+                                <div class="row">
+                                    <div class="col-lg-2 z-1 d-flex justify-content-center">
+                                        <img width="60" height="50" src="logofooter.png" alt="">
+                                    </div>
+                                    <div class="col-lg-10 z-1">
+                                        <h6>{{$feedback->email}}</h6>
+                                        <p style="word-wrap: break-word;">
+                                           {{$feedback->content}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
+                            No feedback to website...
+                        @endforelse
+                    </div>
+                    <style>
+                        .bg-white{
+                            background: transparent !important;
+                            border: none
+                        }
+                        .border{
+                            border: none !important
+                        }
+                        .pagination nav .justify-between{
+                            display: none;
+                            justify-content: end;
+                        }
+                        .pagination nav ul{
+                            --bs-pagination-bg:none !important;
+                            --bs-pagination-border-color: none !important;
+                        }
+                        .pagination nav ul .disabled{
+                            --bs-pagination-disabled-color:none !important;
+                            --bs-pagination-border-color: none !important;
+                            --bs-pagination-disabled-bg: none !important;
+                        }
+                        .active>.page-link, .page-link.active{
+                            background-color: unset;
+                            color: #ffffff;
+                            font-weight: 900
+                        }
+                        
+                    </style>
+
+                    <div class="pagination" style="display: flex; justify-content: end">
+                       
+                            {{ $feedbacks->appends(request()->query())->links('pagination::bootstrap-4') }}
+                       
+                    </div>
+
+
+                   
+                </div>
             </div>
         </section>
     </div>
@@ -143,9 +207,9 @@
             const textLength = textarea.value.length;
             charCounter.textContent = `${textLength}/255`;
             if (textLength > 255) {
-            textarea.value = textarea.value.slice(0, 255); // Trim excess characters
-            charCounter.textContent = '255/255'; // Update counter to max limit
-        }
+                textarea.value = textarea.value.slice(0, 255); // Trim excess characters
+                charCounter.textContent = '255/255'; // Update counter to max limit
+            }
         });
     </script>
 @endsection

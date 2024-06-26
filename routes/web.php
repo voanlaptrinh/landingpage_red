@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BlockLandingController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\FeedbackController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\SubcriptionController;
 use App\Http\Controllers\Admin\TeamController;
@@ -48,6 +49,8 @@ Route::prefix('/faqs')->group(function () {
 });
 Route::prefix('/feedback')->group(function () {
     Route::get('/', [UserFeedbackController::class, 'index'])->name('feedback.index');
+    Route::post('/post-feedback', [UserFeedbackController::class, 'store'])->name('feedback.store');
+
 });
 Route::prefix('/admin')->group(function () {
 
@@ -61,7 +64,10 @@ Route::prefix('/admin')->group(function () {
     Route::prefix('/mailContact')->group(function () {
         Route::get('/', [ContactController::class, 'EmailCotact'])->name('email.index');
     });
-
+    Route::prefix('/feedback')->group(function () {
+        Route::get('/', [FeedbackController::class, 'index'])->name('feedback.admin');
+        Route::post('/feedback/toggle-status/{id}', [FeedbackController::class, 'toggleStatus'])->name('feedback.toggleStatus');
+    });
 
     Route::prefix('/faqs')->group(function () {
         // Route::resource('/', FaqController::class);
