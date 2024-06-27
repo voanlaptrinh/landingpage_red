@@ -41,6 +41,12 @@
                 <span>Feedback</span>
             </a>
         </li><!-- End Dashboard Nav -->
+        <li class="nav-item ">
+            <a class="nav-link " href="{{ route('infomation.admin') }}">
+                <i class="ri-feedback-line"></i>
+                <span>Infomation</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
         <li class="nav-item {{ Request::route()->getName() == 'contact.admin' ? 'active-sidebar' : '' }}">
             <a class="nav-link " href="{{ route('contact.admin') }}">
                 <i class="bx bx-mail-send"></i>
